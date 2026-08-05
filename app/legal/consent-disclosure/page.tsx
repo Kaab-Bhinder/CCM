@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageBanner from "@/components/PageBanner";
 
 export const metadata: Metadata = {
   title: "Consent & Disclosure Policy",
@@ -9,12 +10,7 @@ export default function Page() {
   return (
     <>
 
-  <section className="page-hero">
-    <div className="container">
-      <nav className="breadcrumb"><a href="/">Home</a> / <span>Consent &amp; disclosure policy</span></nav>
-      <h1>Consent &amp; disclosure policy</h1>
-    </div>
-  </section>
+  <PageBanner crumb="CONSENT & DISCLOSURE" title={<>Consent &amp; disclosure policy</>} />
 
   <section className="section">
     <div className="container prose">

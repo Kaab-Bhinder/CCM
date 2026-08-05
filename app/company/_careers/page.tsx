@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PageBanner from "@/components/PageBanner";
 import ReadyBand from "@/components/ReadyBand";
+import Icon from "@/components/Icon";
 
 export const metadata: Metadata = {
   title: "Careers",
@@ -8,9 +9,9 @@ export const metadata: Metadata = {
 };
 
 const TRAITS = [
-  { icon: "⚡", title: "Fast-Paced", desc: "We move quickly, ship often, and adjust course based on real performance data." },
-  { icon: "📊", title: "Data-Driven", desc: "Decisions are grounded in numbers, not guesswork — from routing logic to hiring." },
-  { icon: "🌍", title: "Remote-Friendly", desc: "We hire great people wherever they are and build our workflows around that." },
+  { icon: "bolt", title: "Fast-Paced", desc: "We move quickly, ship often, and adjust course based on real performance data." },
+  { icon: "dashboard", title: "Data-Driven", desc: "Decisions are grounded in numbers, not guesswork — from routing logic to hiring." },
+  { icon: "globe", title: "Remote-Friendly", desc: "We hire great people wherever they are and build our workflows around that." },
 ];
 
 export default function Page() {
@@ -27,7 +28,7 @@ export default function Page() {
           <div className="grid cols-3">
             {TRAITS.map((t, i) => (
               <div className={`val-card vc-${i % 3}`} key={t.title}>
-                <span className="val-ic">{t.icon}</span>
+                <span className="val-ic"><Icon name={t.icon} size={62} /></span>
                 <h3>{t.title}</h3>
                 <p>{t.desc}</p>
               </div>

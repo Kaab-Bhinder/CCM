@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PageBanner from "@/components/PageBanner";
 import ReadyBand from "@/components/ReadyBand";
+import Icon from "@/components/Icon";
 
 export const metadata: Metadata = {
   title: "Partners",
@@ -14,9 +15,9 @@ const SEATS = [
 ];
 
 const TRUST = [
-  { icon: "🛡️", title: "TCPA & DNC Compliant", desc: "TCPA and DNC safeguards are built into every campaign before a single call or lead is routed." },
-  { icon: "⚡", title: "Real-Time Tracking & API", desc: "Live call and lead data with API integrations that plug straight into your existing stack." },
-  { icon: "✅", title: "Vetted Partner Network", desc: "Every partner is reviewed and monitored for quality before they're allowed to route traffic." },
+  { icon: "shield", title: "TCPA & DNC Compliant", desc: "TCPA and DNC safeguards are built into every campaign before a single call or lead is routed." },
+  { icon: "bolt", title: "Real-Time Tracking & API", desc: "Live call and lead data with API integrations that plug straight into your existing stack." },
+  { icon: "check-circle", title: "Vetted Partner Network", desc: "Every partner is reviewed and monitored for quality before they're allowed to route traffic." },
 ];
 
 export default function Page() {
@@ -51,7 +52,7 @@ export default function Page() {
           <div className="grid cols-3">
             {TRUST.map((t) => (
               <div className="sp-feat" key={t.title}>
-                <span className="fb fb-0">{t.icon}</span>
+                <span className="fb fb-0"><Icon name={t.icon} size={62} /></span>
                 <h3>{t.title}</h3>
                 <p>{t.desc}</p>
               </div>

@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import Icon from "@/components/Icon";
+import PageBanner from "@/components/PageBanner";
+import ReadyBand from "@/components/ReadyBand";
 
 export const metadata: Metadata = {
   title: "Integrations \u2014 Tracking, CRM & Delivery",
@@ -9,14 +12,7 @@ export default function Page() {
   return (
     <>
 
-  <section className="page-hero">
-    <div className="container">
-      <nav className="breadcrumb"><a href="/">Home</a> / <a href="/advertisers">Advertisers</a> / <span>Integrations</span></nav>
-      <span className="eyebrow">Integrations</span>
-      <h1>Plugs into the stack you already run.</h1>
-      <p className="lead">Calls and leads are only useful where your team works. We deliver into your tracking platform, CRM, and dialer in real time — with specs your engineers can read before kickoff.</p>
-    </div>
-  </section>
+  <PageBanner crumb="INTEGRATIONS" title={<>Plugs into the stack you already run.</>} desc={<>Calls and leads are only useful where your team works. We deliver into your tracking platform, CRM, and dialer in real time — with specs your engineers can read before kickoff.</>} />
 
   <section className="section">
     <div className="container">
@@ -27,17 +23,17 @@ export default function Page() {
       </div>
       <div className="grid cols-3">
         <div className="card">
-          <div className="icon">📡</div>
+          <div className="icon"><Icon name="bolt" size={58} /></div>
           <h3>Call tracking</h3>
           <p>Ringba, Retreaver, TrackDrive, Invoca — number provisioning, ring pools, real-time bidding, and postback events.</p>
         </div>
         <div className="card">
-          <div className="icon">🗂️</div>
+          <div className="icon"><Icon name="layers" size={58} /></div>
           <h3>CRM</h3>
           <p>Salesforce, HubSpot, Zoho, and custom CRMs via REST posting — field mapping agreed at onboarding.</p>
         </div>
         <div className="card">
-          <div className="icon">☎️</div>
+          <div className="icon"><Icon name="phone" size={58} /></div>
           <h3>Dialers &amp; contact centers</h3>
           <p>Five9, Convoso, ViciDial, and SIP-based routing — warm transfers, IVR handoffs, and disposition sync.</p>
         </div>
@@ -72,17 +68,7 @@ export default function Page() {
       </ul>
     </div>
   </section>
-
-  <section className="final-cta">
-    <div className="container center">
-      <h2>Have your ops team join the first call.</h2>
-      <p className="muted" style={{ margin: "12px 0 28px" }}>Integration questions get answered before the IO, not after.</p>
-      <div className="cta-row" style={{ justifyContent: "center" }}>
-        <a className="btn btn-primary btn-lg" href="/advertisers#proposal">Request campaign proposal</a>
-        <a className="btn btn-secondary btn-lg" href="/advertisers/lead-quality">See quality controls</a>
-      </div>
-    </div>
-  </section>
+      <ReadyBand heading={"Have your ops team join the first call."} />
     </>
   );
 }

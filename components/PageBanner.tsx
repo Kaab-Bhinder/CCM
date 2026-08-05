@@ -29,10 +29,12 @@ export default function PageBanner({
   crumb,
   title,
   desc,
+  children,
 }: {
   crumb: string;
   title: React.ReactNode;
   desc?: React.ReactNode;
+  children?: React.ReactNode;
 }) {
   return (
     <section className="pb-hero">
@@ -74,6 +76,7 @@ export default function PageBanner({
         </nav>
         <h1 className="pb-title">{title}</h1>
         {desc && <p className="pb-desc">{desc}</p>}
+        {children && <div className="pb-actions">{children}</div>}
       </div>
       <span className="pb-edge" aria-hidden="true">✳</span>
     </section>

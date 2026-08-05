@@ -3,6 +3,7 @@ import ReadyBand from "@/components/ReadyBand";
 import Testimonials from "@/components/Testimonials";
 import data from "@/public/assets/data.json";
 import PageBanner from "@/components/PageBanner";
+import Icon from "@/components/Icon";
 
 export type SolutionData = {
   crumb: string;
@@ -26,7 +27,7 @@ export type SolutionData = {
 
 /* Solutions page template — bento benefits, numbered stepper, fit checklist.
    Deliberately a different architecture from the Services template. */
-export default function SolutionTemplate({ d }: { d: SolutionData }) {
+export default function SolutionTemplate({ d, extra }: { d: SolutionData; extra?: React.ReactNode }) {
   return (
     <div className={`sol-page var-${d.variant ?? "a"}`}>
       <PageBanner crumb={d.crumb} title={d.title} desc={d.heroDesc} />
@@ -46,7 +47,7 @@ export default function SolutionTemplate({ d }: { d: SolutionData }) {
             </div>
             {d.tiles.map((t, i) => (
               <div className={`sol-tile st-${i % 3}`} key={t.title}>
-                <span className="sol-ic">{t.icon}</span>
+                <span className="sol-ic"><Icon name={t.icon} size={64} /></span>
                 <h3>{t.title}</h3>
                 <p>{t.desc}</p>
               </div>
@@ -99,6 +100,8 @@ export default function SolutionTemplate({ d }: { d: SolutionData }) {
           </div>
         </div>
       </section>
+
+      {extra}
 
       <ReadyBand heading={d.ctaHeading} sub={d.ctaSub} ctaLabel={d.ctaLabel} ctaHref={d.ctaHref} />
     </div>

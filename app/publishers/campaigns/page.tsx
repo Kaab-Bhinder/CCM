@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import PageBanner from "@/components/PageBanner";
+import ReadyBand from "@/components/ReadyBand";
 
 export const metadata: Metadata = {
   title: "Campaign Categories \u2014 Live Publisher Offers",
@@ -9,16 +11,7 @@ export default function Page() {
   return (
     <>
 
-  <section className="page-hero">
-    <div className="container">
-      <nav className="breadcrumb"><a href="/">Home</a> / <a href="/publishers">Publishers</a> / <span>Campaign categories</span></nav>
-      <span className="eyebrow">For Publishers</span>
-      <h1>Live campaign categories.</h1>
-      <p className="lead">What's open, what it pays on, and what traffic is allowed. Exact rates are shown in the portal after approval — the categories below are kept current.</p>
-      {/* KEEP THIS PAGE CURRENT. A stale campaign board costs credibility on day one (per IA spec).
-           Last reviewed: 2026-08-04 — update this date on every edit. */}
-    </div>
-  </section>
+  <PageBanner crumb="CAMPAIGNS" title={<>Live campaign categories.</>} desc={<>What's open, what it pays on, and what traffic is allowed. Exact rates are shown in the portal after approval — the categories below are kept current.</>} />
 
   <section className="section">
     <div className="container">
@@ -74,17 +67,7 @@ export default function Page() {
       <p className="small muted" style={{ marginTop: "16px" }}>Payout figures, buffer definitions, and per-campaign rules are visible in the publisher portal after approval. Traffic must meet the <a href="/publishers/requirements">network requirements</a> at all times.</p>
     </div>
   </section>
-
-  <section className="final-cta">
-    <div className="container center">
-      <h2>See the rates behind these categories.</h2>
-      <p className="muted" style={{ margin: "12px 0 28px" }}>Approval takes 2–3 business days from a complete application.</p>
-      <div className="cta-row" style={{ justifyContent: "center" }}>
-        <a className="btn btn-primary btn-lg" href="/publishers/apply">Apply now</a>
-        <a className="btn btn-secondary btn-lg" href="/publishers/payouts">Payout terms</a>
-      </div>
-    </div>
-  </section>
+      <ReadyBand heading={"See the rates behind these categories."} />
     </>
   );
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageBanner from "@/components/PageBanner";
 
 export const metadata: Metadata = {
   title: "Advertiser Terms",
@@ -9,17 +10,12 @@ export default function Page() {
   return (
     <>
 
-  <section className="page-hero">
-    <div className="container">
-      <nav className="breadcrumb"><a href="/">Home</a> / <span>Advertiser terms</span></nav>
-      <h1>Advertiser terms</h1>
-    </div>
-  </section>
+  <PageBanner crumb="ADVERTISER TERMS" title={<>Advertiser terms</>} />
 
   <section className="section">
     <div className="container prose">
       <p className="updated">Version: [X.X] · Effective: [DATE]</p>
-      <div className="notice"><strong>Legal scaffold — counsel must draft the final text.</strong> The signed IO plus these terms form the contract. Plain-language explanation of the model: <a href="/advertisers/pricing">pricing</a> and <a href="/advertisers/lead-quality">lead &amp; call quality</a>.</div>
+      <div className="notice"><strong>Legal scaffold — counsel must draft the final text.</strong> The signed IO plus these terms form the contract. Plain-language explanation of the model: pricing and <a href="/advertisers/lead-quality">lead &amp; call quality</a>.</div>
 
       <h2>1. Campaign terms &amp; IOs</h2><p>[IO precedence, campaign parameters, change process.]</p>
       <h2>2. Billable events</h2><p>[Buffer definition, qualification criteria, lead acceptance rules — must match the published pricing page.]</p>

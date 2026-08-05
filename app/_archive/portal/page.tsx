@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageBanner from "@/components/PageBanner";
 
 export const metadata: Metadata = {
   title: "Login",
@@ -9,12 +10,7 @@ export default function Page() {
   return (
     <>
 
-  <section className="page-hero">
-    <div className="container">
-      <h1>Portal login</h1>
-      <p className="lead">Choose your portal. {/* PLACEHOLDER PAGE: point these buttons at the real portal URLs (e.g. your tracking platform or partner dashboard) and remove this page, or keep it as a router. */}</p>
-    </div>
-  </section>
+  <PageBanner crumb="LOGIN" title={<>Portal login</>} desc={<>Choose your portal. {/* PLACEHOLDER PAGE: point these buttons at the real portal URLs (e.g. your tracking platform or partner dashboard) and remove this page, or keep it as a router. */}</>} />
 
   <section className="section">
     <div className="container">

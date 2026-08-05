@@ -4,6 +4,7 @@ import SmartImage from "@/components/SmartImage";
 import ReadyBand from "@/components/ReadyBand";
 import Testimonials from "@/components/Testimonials";
 import data from "@/public/assets/data.json";
+import Icon from "@/components/Icon";
 
 export const metadata: Metadata = {
   title: "About",
@@ -11,12 +12,12 @@ export const metadata: Metadata = {
 };
 
 const VALUES = [
-  { icon: "🔥", title: "Passion-Driven", desc: "We live and breathe your success." },
-  { icon: "🏅", title: "Excellence First", desc: "Quality is never negotiable." },
-  { icon: "🤝", title: "Trust & Integrity", desc: "Your success is our reputation." },
-  { icon: "🧭", title: "Strategic Vision", desc: "Long-term thinking, immediate results." },
-  { icon: "💡", title: "Innovation Focus", desc: "Cutting-edge solutions for modern challenges." },
-  { icon: "✅", title: "Results Guaranteed", desc: "We deliver what we promise." },
+  { icon: "fire", title: "Passion-Driven", desc: "We live and breathe your success." },
+  { icon: "medal", title: "Excellence First", desc: "Quality is never negotiable." },
+  { icon: "handshake", title: "Trust & Integrity", desc: "Your success is our reputation." },
+  { icon: "compass", title: "Strategic Vision", desc: "Long-term thinking, immediate results." },
+  { icon: "lightbulb", title: "Innovation Focus", desc: "Cutting-edge solutions for modern challenges." },
+  { icon: "check-circle", title: "Results Guaranteed", desc: "We deliver what we promise." },
 ];
 
 export default function Page() {
@@ -92,7 +93,7 @@ export default function Page() {
           <div className="grid cols-3 val-grid">
             {VALUES.map((v, i) => (
               <div className={`val-card vc-${i % 3}`} key={v.title}>
-                <span className="val-ic">{v.icon}</span>
+                <span className="val-ic"><Icon name={v.icon} size={58} /></span>
                 <h3>{v.title}</h3>
                 <p>{v.desc}</p>
               </div>
@@ -101,7 +102,7 @@ export default function Page() {
         </div>
       </section>
 
-      <Testimonials heading="What Partners Say About Us" sub="Feedback from advertisers and publishers on the network." start={4} count={2} scribble={false} />
+      <Testimonials heading="What Partners Say About Us" sub="Feedback from advertisers and publishers on the network." start={0} count={6} perView={2} scribble={false} />
 
       <ReadyBand heading={"Want to Work\nWith the Crew?"} sub="Whether you're an advertiser, a publisher, or looking to join the team, let's talk." />
     </>

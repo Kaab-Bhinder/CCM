@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import Icon from "@/components/Icon";
+import PageBanner from "@/components/PageBanner";
+import ReadyBand from "@/components/ReadyBand";
 
 export const metadata: Metadata = {
   title: "Lead & Call Quality \u2014 How CCM Controls It",
@@ -9,18 +12,12 @@ export default function Page() {
   return (
     <>
 
-  <section className="page-hero">
-    <div className="container">
-      <nav className="breadcrumb"><a href="/">Home</a> / <a href="/advertisers">Advertisers</a> / <span>Lead &amp; call quality</span></nav>
-      <span className="eyebrow">The Differentiator</span>
-      <h1>Quality isn't a promise here. It's a process you can audit.</h1>
-      <p className="lead">Most networks tell you their leads are good. We'd rather show you the machinery: who gets into the network, what we check on every delivery, and exactly what happens when something slips through.</p>
-      <div className="cta-row">
+  <PageBanner crumb="LEAD & CALL QUALITY" title={<>Quality isn't a promise here. It's a process you can audit.</>} desc={<>Most networks tell you their leads are good. We'd rather show you the machinery: who gets into the network, what we check on every delivery, and exactly what happens when something slips through.</>}>
+        <div className="cta-row">
         <a className="btn btn-primary btn-lg" href="/advertisers#proposal">Request campaign proposal</a>
         <a className="btn btn-secondary btn-lg" href="/compliance">See the compliance framework</a>
       </div>
-    </div>
-  </section>
+      </PageBanner>
 
   {/* Vetting & disclosure */}
   <section className="section">
@@ -51,17 +48,17 @@ export default function Page() {
       </div>
       <div className="grid cols-3">
         <div className="card">
-          <div className="icon">🔁</div>
+          <div className="icon"><Icon name="route" size={58} /></div>
           <h3>Duplicate &amp; recycled detection</h3>
           <p>Every lead and caller is checked against delivery history. Duplicates inside your dedup window are blocked or auto-credited — you don't pay twice for the same consumer.</p>
         </div>
         <div className="card">
-          <div className="icon">🎯</div>
+          <div className="icon"><Icon name="target" size={58} /></div>
           <h3>Call scoring &amp; qualification</h3>
           <p>Calls are scored on connected time, intent signals, and your qualification criteria. Sub-threshold calls never bill. Scores feed publisher rankings, so quality compounds.</p>
         </div>
         <div className="card">
-          <div className="icon">🚨</div>
+          <div className="icon"><Icon name="shield" size={58} /></div>
           <h3>Fraud signals monitored</h3>
           <p>Repeat-caller patterns, carrier/line-type anomalies, short-call clustering, geo mismatches, and incentivized-traffic fingerprints — flagged automatically, investigated by humans.</p>
         </div>
@@ -114,17 +111,7 @@ export default function Page() {
       </div>
     </div>
   </section>
-
-  <section className="final-cta">
-    <div className="container center">
-      <h2>Put our quality claims under a microscope.</h2>
-      <p className="muted" style={{ margin: "12px 0 28px" }}>Start with a controlled ramp and audit every call yourself.</p>
-      <div className="cta-row" style={{ justifyContent: "center" }}>
-        <a className="btn btn-primary btn-lg" href="/advertisers#proposal">Request campaign proposal</a>
-        <a className="btn btn-secondary btn-lg" href="/advertisers/pricing">See the pricing model</a>
-      </div>
-    </div>
-  </section>
+      <ReadyBand heading={"Put our quality claims under a microscope."} />
     </>
   );
 }

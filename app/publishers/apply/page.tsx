@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageBanner from "@/components/PageBanner";
 
 export const metadata: Metadata = {
   title: "Apply to the Publisher Network",
@@ -9,14 +10,7 @@ export default function Page() {
   return (
     <>
 
-  <section className="page-hero">
-    <div className="container">
-      <nav className="breadcrumb"><a href="/">Home</a> / <a href="/publishers">Publishers</a> / <span>Apply</span></nav>
-      <span className="eyebrow">Publisher Application</span>
-      <h1>Apply to the network.</h1>
-      <p className="lead">This goes to the partnerships team, not a general inbox. Complete applications get a written answer in <strong>2–3 business days</strong>; incomplete ones get a question back, which slows everyone down — so fill in the detail.</p>
-    </div>
-  </section>
+  <PageBanner crumb="APPLY" title={<>Apply to the network.</>} desc={<>This goes to the partnerships team, not a general inbox. Complete applications get a written answer in <strong>2–3 business days</strong>; incomplete ones get a question back, which slows everyone down — so fill in the detail.</>} />
 
   <section className="section">
     <div className="container narrow">

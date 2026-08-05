@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import SolutionTemplate, { type SolutionData } from "@/components/SolutionTemplate";
+import SubNav from "@/components/SubNav";
 
 export const metadata: Metadata = {
   title: "For Publishers",
@@ -17,9 +18,9 @@ const d: SolutionData = {
     desc: "Close Crew gives publishers access to premium advertiser offers, transparent payouts, and real-time performance data — so you can grow your traffic with confidence.",
   },
   tiles: [
-    { icon: "💎", title: "Premium Advertiser Offers", desc: "Access exclusive Pay Per Call, AI Automation, and Digital Marketing offers across Auto Insurance, Medicare, ACA, Final Expense, and more." },
-    { icon: "💸", title: "Transparent, Fast Payouts", desc: "Know exactly what you're earning and when. No hidden fees, no guessing games — just reliable, on-time payments." },
-    { icon: "🤝", title: "Dedicated Publisher Support", desc: "Work with a real account team that helps you optimize offers, troubleshoot issues, and grow your traffic sustainably." },
+    { icon: "gem", title: "Premium Advertiser Offers", desc: "Access exclusive Pay Per Call, AI Automation, and Digital Marketing offers across Auto Insurance, Medicare, ACA, Final Expense, and more." },
+    { icon: "wallet", title: "Transparent, Fast Payouts", desc: "Know exactly what you're earning and when. No hidden fees, no guessing games — just reliable, on-time payments." },
+    { icon: "handshake", title: "Dedicated Publisher Support", desc: "Work with a real account team that helps you optimize offers, troubleshoot issues, and grow your traffic sustainably." },
   ],
   stepsHeading: "From Application to Payout",
   steps: [
@@ -50,5 +51,14 @@ const d: SolutionData = {
 };
 
 export default function Page() {
-  return <SolutionTemplate d={d} />;
+  return <SolutionTemplate d={d} extra={
+    <SubNav
+        title="More for Publishers"
+        links={[
+          { label: "Campaign Categories", href: "/publishers/campaigns", desc: "Live categories by vertical with payout types, traffic, and caps." },
+          { label: "Requirements", href: "/publishers/requirements", desc: "Traffic standards, prohibited methods, and consent obligations." },
+          { label: "Apply", href: "/publishers/apply", desc: "The application form — answered in 2–3 business days." },
+        ]}
+      />
+  } />;
 }

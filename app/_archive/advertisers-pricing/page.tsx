@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import PageBanner from "@/components/PageBanner";
+import ReadyBand from "@/components/ReadyBand";
 
 export const metadata: Metadata = {
   title: "Pricing Model \u2014 What You Pay For and When",
@@ -9,14 +11,7 @@ export default function Page() {
   return (
     <>
 
-  <section className="page-hero">
-    <div className="container">
-      <nav className="breadcrumb"><a href="/">Home</a> / <a href="/advertisers">Advertisers</a> / <span>Pricing model</span></nav>
-      <span className="eyebrow">For Advertisers</span>
-      <h1>No rate-card theater. Here's how the model works.</h1>
-      <p className="lead">Rates vary by vertical, geography, and season — anyone quoting a flat number before understanding your campaign is guessing. What we can state up front is the model: what triggers a charge, what never does, and what's returnable.</p>
-    </div>
-  </section>
+  <PageBanner crumb="PRICING" title={<>No rate-card theater. Here's how the model works.</>} desc={<>Rates vary by vertical, geography, and season — anyone quoting a flat number before understanding your campaign is guessing. What we can state up front is the model: what triggers a charge, what never does, and what's returnable.</>} />
 
   <section className="section">
     <div className="container">
@@ -76,17 +71,7 @@ export default function Page() {
       </div>
     </div>
   </section>
-
-  <section className="final-cta">
-    <div className="container center">
-      <h2>Get numbers for your specific campaign.</h2>
-      <p className="muted" style={{ margin: "12px 0 28px" }}>Vertical, states, hours, volume — we'll quote against reality.</p>
-      <div className="cta-row" style={{ justifyContent: "center" }}>
-        <a className="btn btn-primary btn-lg" href="/advertisers#proposal">Request campaign proposal</a>
-        <a className="btn btn-secondary btn-lg" href="/advertisers/lead-quality">Review quality controls</a>
-      </div>
-    </div>
-  </section>
+      <ReadyBand heading={"Get numbers for your specific campaign."} />
     </>
   );
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageBanner from "@/components/PageBanner";
 
 export const metadata: Metadata = {
   title: "Accessibility Statement",
@@ -9,12 +10,7 @@ export default function Page() {
   return (
     <>
 
-  <section className="page-hero">
-    <div className="container">
-      <nav className="breadcrumb"><a href="/">Home</a> / <span>Accessibility</span></nav>
-      <h1>Accessibility statement</h1>
-    </div>
-  </section>
+  <PageBanner crumb="ACCESSIBILITY" title={<>Accessibility statement</>} />
 
   <section className="section">
     <div className="container prose">

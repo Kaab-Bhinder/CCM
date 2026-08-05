@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import PageBanner from "@/components/PageBanner";
+import ReadyBand from "@/components/ReadyBand";
 
 export const metadata: Metadata = {
   title: "How It Works for Advertisers \u2014 Onboarding to First Call",
@@ -9,14 +11,7 @@ export default function Page() {
   return (
     <>
 
-  <section className="page-hero">
-    <div className="container">
-      <nav className="breadcrumb"><a href="/">Home</a> / <a href="/advertisers">Advertisers</a> / <span>How it works</span></nav>
-      <span className="eyebrow">For Advertisers</span>
-      <h1>What week one actually looks like.</h1>
-      <p className="lead">No mystery onboarding. Here's the path from signed agreement to your first delivered, billable call — and who's responsible at each step.</p>
-    </div>
-  </section>
+  <PageBanner crumb="HOW IT WORKS" title={<>What week one actually looks like.</>} desc={<>No mystery onboarding. Here's the path from signed agreement to your first delivered, billable call — and who's responsible at each step.</>} />
 
   <section className="section">
     <div className="container narrow">
@@ -39,14 +34,14 @@ export default function Page() {
           <div className="n"></div>
           <div>
             <h4>Buffer &amp; return policy — day 3</h4>
-            <p>We agree the buffer (the connected-time threshold before a call bills), the qualification criteria, and the return window in writing. It's in the IO, not in a side conversation. Details on the <a href="/advertisers/pricing">pricing model</a> page.</p>
+            <p>We agree the buffer (the connected-time threshold before a call bills), the qualification criteria, and the return window in writing. It's in the IO, not in a side conversation. Details on the pricing model page.</p>
           </div>
         </div>
         <div className="step">
           <div className="n"></div>
           <div>
             <h4>Routing &amp; integration — days 3–7</h4>
-            <p>Calls route to your numbers, ring pools, or IVR; leads post to your CRM or dialer in real time. We test with live pings before anything bills. See <a href="/advertisers/integrations">integrations</a> for supported platforms.</p>
+            <p>Calls route to your numbers, ring pools, or IVR; leads post to your CRM or dialer in real time. We test with live pings before anything bills. See integrations for supported platforms.</p>
           </div>
         </div>
         <div className="step">
@@ -70,17 +65,7 @@ export default function Page() {
       </div>
     </div>
   </section>
-
-  <section className="final-cta">
-    <div className="container center">
-      <h2>Ready to see week one for real?</h2>
-      <p className="muted" style={{ margin: "12px 0 28px" }}>Get a proposal scoped to your vertical and volume.</p>
-      <div className="cta-row" style={{ justifyContent: "center" }}>
-        <a className="btn btn-primary btn-lg" href="/advertisers#proposal">Request campaign proposal</a>
-        <a className="btn btn-secondary btn-lg" href="/advertisers/pricing">Understand the pricing model</a>
-      </div>
-    </div>
-  </section>
+      <ReadyBand heading={"Ready to see week one for real?"} />
     </>
   );
 }

@@ -96,10 +96,6 @@ export default function Header() {
               {CONTACT.address}
             </span>
           </div>
-          <div className="utility-links">
-            <Link href="/portal">Publisher login</Link>
-            <Link href="/portal">Advertiser login</Link>
-          </div>
           <div className="socials-wing">
             <div className="socials">
               {SOCIALS.map((s) => (

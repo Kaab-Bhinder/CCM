@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PageBanner from "@/components/PageBanner";
 import ReadyBand from "@/components/ReadyBand";
+import Icon from "@/components/Icon";
 
 export const metadata: Metadata = {
   title: "Compliance",
@@ -8,10 +9,10 @@ export const metadata: Metadata = {
 };
 
 const PILLARS = [
-  { n: "01", tone: "cp-mint", icon: "🛡️", title: "TCPA & DNC Compliant", desc: "Every campaign runs on compliance-first infrastructure, with Do Not Call scrubbing and TCPA safeguards applied before a call or lead ever reaches an advertiser. Consent and call handling are treated as first-class requirements, not an afterthought." },
-  { n: "02", tone: "cp-lav", icon: "⚡", title: "Real-Time Tracking & API", desc: "Advertisers and publishers see call and lead activity as it happens, not in a next-day report. API integrations plug directly into existing CRM and dialer stacks, so performance data flows into the systems your team already uses." },
-  { n: "03", tone: "cp-cream", icon: "✅", title: "Vetted Publisher Network", desc: "Publishers go through a review process before they're allowed to route traffic, and quality is monitored continuously after onboarding. Underperforming or non-compliant sources are addressed quickly to protect advertiser spend." },
-  { n: "04", tone: "cp-sky", icon: "🗺️", title: "National Coverage", desc: "The network is active across all 50 states, with publishers who bring local market expertise in the verticals that matter most. That combination lets advertisers scale nationally while still reaching consumers with regionally relevant messaging." },
+  { n: "01", tone: "cp-mint", icon: "shield", title: "TCPA & DNC Compliant", desc: "Every campaign runs on compliance-first infrastructure, with Do Not Call scrubbing and TCPA safeguards applied before a call or lead ever reaches an advertiser. Consent and call handling are treated as first-class requirements, not an afterthought." },
+  { n: "02", tone: "cp-lav", icon: "bolt", title: "Real-Time Tracking & API", desc: "Advertisers and publishers see call and lead activity as it happens, not in a next-day report. API integrations plug directly into existing CRM and dialer stacks, so performance data flows into the systems your team already uses." },
+  { n: "03", tone: "cp-cream", icon: "check-circle", title: "Vetted Publisher Network", desc: "Publishers go through a review process before they're allowed to route traffic, and quality is monitored continuously after onboarding. Underperforming or non-compliant sources are addressed quickly to protect advertiser spend." },
+  { n: "04", tone: "cp-sky", icon: "map", title: "National Coverage", desc: "The network is active across all 50 states, with publishers who bring local market expertise in the verticals that matter most. That combination lets advertisers scale nationally while still reaching consumers with regionally relevant messaging." },
 ];
 
 const DEEPER = [
@@ -36,7 +37,7 @@ export default function Page() {
           {PILLARS.map((p) => (
             <article className={`cp-row ${p.tone}`} key={p.n}>
               <div className="cp-mark">
-                <span className="cp-ic">{p.icon}</span>
+                <span className="cp-ic"><Icon name={p.icon} size={62} /></span>
                 <span className="cp-n">{p.n}</span>
               </div>
               <div className="cp-body">

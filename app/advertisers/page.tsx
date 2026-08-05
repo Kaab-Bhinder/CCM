@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import SolutionTemplate, { type SolutionData } from "@/components/SolutionTemplate";
+import SubNav from "@/components/SubNav";
 
 export const metadata: Metadata = {
   title: "For Advertisers",
@@ -17,9 +18,9 @@ const d: SolutionData = {
     desc: "Every call and lead is routed through vetted publishers and scored in real time, so your team spends time on consumers who are ready to convert.",
   },
   tiles: [
-    { icon: "📊", title: "Transparent, Real-Time Reporting", desc: "See campaign performance as it happens with live call and lead tracking, so you always know exactly what your spend is producing." },
-    { icon: "🛡️", title: "Compliance-First Infrastructure", desc: "Built-in TCPA and DNC safeguards, call verification, and publisher vetting protect your brand while your campaigns scale." },
-    { icon: "📈", title: "Scalable Spend Across Verticals", desc: "From Auto Insurance to Medicare, ACA, and Final Expense, our network flexes to your volume goals without sacrificing quality." },
+    { icon: "dashboard", title: "Transparent, Real-Time Reporting", desc: "See campaign performance as it happens with live call and lead tracking, so you always know exactly what your spend is producing." },
+    { icon: "shield", title: "Compliance-First Infrastructure", desc: "Built-in TCPA and DNC safeguards, call verification, and publisher vetting protect your brand while your campaigns scale." },
+    { icon: "trending", title: "Scalable Spend Across Verticals", desc: "From Auto Insurance to Medicare, ACA, and Final Expense, our network flexes to your volume goals without sacrificing quality." },
   ],
   stepsHeading: "From Signed IO to Scaled Volume",
   steps: [
@@ -48,5 +49,13 @@ const d: SolutionData = {
 };
 
 export default function Page() {
-  return <SolutionTemplate d={d} />;
+  return <SolutionTemplate d={d} extra={
+    <SubNav
+        title="More for Advertisers"
+        links={[
+          { label: "How It Works", href: "/advertisers/how-it-works", desc: "From signed IO to your first delivered call, step by step." },
+          { label: "Lead & Call Quality", href: "/advertisers/lead-quality", desc: "Vetting, dedup, scoring, fraud signals, and the return policy." },
+        ]}
+      />
+  } />;
 }

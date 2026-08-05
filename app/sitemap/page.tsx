@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageBanner from "@/components/PageBanner";
 
 export const metadata: Metadata = {
   title: "Sitemap",
@@ -9,12 +10,7 @@ export default function Page() {
   return (
     <>
 
-  <section className="page-hero">
-    <div className="container">
-      <nav className="breadcrumb"><a href="/">Home</a> / <span>Sitemap</span></nav>
-      <h1>Sitemap</h1>
-    </div>
-  </section>
+  <PageBanner crumb="SITEMAP" title={<>Sitemap</>} />
 
   <section className="section">
     <div className="container">
@@ -25,8 +21,6 @@ export default function Page() {
             <li><a href="/advertisers">Overview</a></li>
             <li><a href="/advertisers/how-it-works">How it works</a></li>
             <li><a href="/advertisers/lead-quality">Lead &amp; call quality</a></li>
-            <li><a href="/advertisers/pricing">Pricing model</a></li>
-            <li><a href="/advertisers/integrations">Integrations</a></li>
             <li><a href="/advertisers/case-studies">Case studies</a></li>
           </ul>
         </div>
@@ -35,10 +29,8 @@ export default function Page() {
           <ul>
             <li><a href="/publishers">Overview</a></li>
             <li><a href="/publishers/campaigns">Campaign categories</a></li>
-            <li><a href="/publishers/payouts">Payouts &amp; terms</a></li>
             <li><a href="/publishers/requirements">Requirements</a></li>
             <li><a href="/publishers/apply">Apply</a></li>
-            <li><a href="/portal">Publisher login</a></li>
           </ul>
         </div>
         <div className="footer-col">
@@ -48,7 +40,6 @@ export default function Page() {
             <li><a href="/services/pay-per-call">Pay per call</a></li>
             <li><a href="/services/ai-automation">AI automation</a></li>
             <li><a href="/services/digital-marketing">Digital marketing</a></li>
-            <li><a href="/advertisers/integrations">Integrations</a></li>
           </ul>
         </div>
         <div className="footer-col">

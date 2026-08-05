@@ -17,9 +17,9 @@ const d: SolutionData = {
     desc: "Plug the network directly into your existing stack with custom API integrations, real-time data feeds, and CRM syncing built around how your team already works.",
   },
   tiles: [
-    { icon: "🧑‍💼", title: "Dedicated Account Management", desc: "Enterprise partners get a dedicated account team focused on your goals, not a shared support queue — for strategy, troubleshooting, and ongoing optimization." },
-    { icon: "📐", title: "Volume-Based Programs", desc: "Structured, scalable programs designed for high-volume advertisers and publishers, with pricing and terms that grow with your business." },
-    { icon: "🗺️", title: "National Compliance Coverage", desc: "Licensed and active across all 50 states, with compliance infrastructure built to support large-scale, multi-market campaigns." },
+    { icon: "user-tie", title: "Dedicated Account Management", desc: "Enterprise partners get a dedicated account team focused on your goals, not a shared support queue — for strategy, troubleshooting, and ongoing optimization." },
+    { icon: "ruler", title: "Volume-Based Programs", desc: "Structured, scalable programs designed for high-volume advertisers and publishers, with pricing and terms that grow with your business." },
+    { icon: "map", title: "National Compliance Coverage", desc: "Licensed and active across all 50 states, with compliance infrastructure built to support large-scale, multi-market campaigns." },
   ],
   stepsHeading: "How a Partnership Comes Together",
   steps: [

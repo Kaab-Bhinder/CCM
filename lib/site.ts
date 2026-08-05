@@ -37,7 +37,14 @@ export const NAV: NavItem[] = [
     href: "/advertisers",
     children: [
       { label: "Advertisers", href: "/advertisers" },
+      { label: "How It Works", href: "/advertisers/how-it-works" },
+      { label: "Lead & Call Quality", href: "/advertisers/lead-quality" },
+      { sep: true },
       { label: "Publishers", href: "/publishers" },
+      { label: "Campaign Categories", href: "/publishers/campaigns" },
+      { label: "Requirements", href: "/publishers/requirements" },
+      { label: "Apply", href: "/publishers/apply" },
+      { sep: true },
       { label: "Enterprise Partnerships", href: "/company/enterprise-partnerships" },
     ],
   },
@@ -49,6 +56,7 @@ export const NAV: NavItem[] = [
       { label: "Pay Per Call", href: "/services/pay-per-call" },
       { label: "AI Automation", href: "/services/ai-automation" },
       { label: "Digital Marketing", href: "/services/digital-marketing" },
+      { label: "All Services", href: "/services" },
     ],
   },
   {
@@ -72,6 +80,7 @@ export const NAV: NavItem[] = [
       { label: "Insights", href: "/resources/insights" },
       { label: "Compliance", href: "/compliance" },
       { label: "FAQs", href: "/resources/faqs" },
+      { label: "Glossary", href: "/resources/glossary" },
     ],
   },
   {
@@ -93,7 +102,6 @@ export const FOOTER_COLS: { title: string; links: { label: string; href: string 
       { label: "For advertisers", href: "/advertisers" },
       { label: "For publishers", href: "/publishers" },
       { label: "Lead quality", href: "/advertisers/lead-quality" },
-      { label: "Pricing", href: "/advertisers/pricing" },
     ],
   },
   {
@@ -102,7 +110,6 @@ export const FOOTER_COLS: { title: string; links: { label: string; href: string 
       { label: "Pay per call", href: "/services/pay-per-call" },
       { label: "AI automation", href: "/services/ai-automation" },
       { label: "Digital marketing", href: "/services/digital-marketing" },
-      { label: "Integrations", href: "/advertisers/integrations" },
     ],
   },
   {
@@ -135,8 +142,6 @@ export const FOOTER_COLS: { title: string; links: { label: string; href: string 
     title: "Connect",
     links: [
       { label: "Contact", href: "/company/contact" },
-      { label: "Advertiser login", href: "/portal" },
-      { label: "Publisher login", href: "/portal" },
       { label: "Apply as publisher", href: "/publishers/apply" },
     ],
   },

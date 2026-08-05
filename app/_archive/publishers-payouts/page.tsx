@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import PageBanner from "@/components/PageBanner";
+import ReadyBand from "@/components/ReadyBand";
 
 export const metadata: Metadata = {
   title: "Payouts & Terms \u2014 Published, Not Gated",
@@ -9,14 +11,7 @@ export default function Page() {
   return (
     <>
 
-  <section className="page-hero">
-    <div className="container">
-      <nav className="breadcrumb"><a href="/">Home</a> / <a href="/publishers">Publishers</a> / <span>Payouts &amp; terms</span></nav>
-      <span className="eyebrow">For Publishers</span>
-      <h1>Payment terms, published.</h1>
-      <p className="lead">The second thing every publisher checks — so it's a public page, not a discovery you make after signing. {/* Confirm these values match the actual publisher agreement before launch. */}</p>
-    </div>
-  </section>
+  <PageBanner crumb="PAYOUTS" title={<>Payment terms, published.</>} desc={<>The second thing every publisher checks — so it's a public page, not a discovery you make after signing. {/* Confirm these values match the actual publisher agreement before launch. */}</>} />
 
   <section className="section">
     <div className="container narrow">
@@ -51,17 +46,7 @@ export default function Page() {
       </div>
     </div>
   </section>
-
-  <section className="final-cta">
-    <div className="container center">
-      <h2>Terms look right? Apply.</h2>
-      <p className="muted" style={{ margin: "12px 0 28px" }}>2–3 business day review from a complete application.</p>
-      <div className="cta-row" style={{ justifyContent: "center" }}>
-        <a className="btn btn-primary btn-lg" href="/publishers/apply">Apply as a publisher</a>
-        <a className="btn btn-secondary btn-lg" href="/publishers/campaigns">Campaign categories</a>
-      </div>
-    </div>
-  </section>
+      <ReadyBand heading={"Terms look right? Apply."} />
     </>
   );
 }

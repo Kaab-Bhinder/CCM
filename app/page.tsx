@@ -4,6 +4,7 @@ import SmartImage from "@/components/SmartImage";
 import ReadyBand from "@/components/ReadyBand";
 import Testimonials from "@/components/Testimonials";
 import data from "@/public/assets/data.json";
+import Icon from "@/components/Icon";
 
 // Services shown in the auto-scrolling marquee under the hero.
 const MARQUEE_SERVICES = [
@@ -78,17 +79,17 @@ export default function Page() {
       </div>
       <div className="grid cols-3 svc-grid">
         <a className="svc-card" href="/services/pay-per-call">
-          <span className="svc-icon"><span className="fallback">📞</span><SmartImage src="/assets/s2.png" alt="" /></span>
+          <span className="svc-icon"><span className="fallback"><Icon name="phone" size={70} /></span><SmartImage src="/assets/s2.png" alt="" /></span>
           <h3>Pay Per Call</h3>
           <p>Performance-based call campaigns that connect advertisers directly with consumers ready to buy.</p>
         </a>
         <a className="svc-card" href="/services/ai-automation">
-          <span className="svc-icon"><span className="fallback">⚙️</span><SmartImage src="/assets/s1.png" alt="" /></span>
+          <span className="svc-icon"><span className="fallback"><Icon name="layers" size={70} /></span><SmartImage src="/assets/s1.png" alt="" /></span>
           <h3>AI Automation</h3>
           <p>AI-driven matching, scoring, and optimization that gets every lead to the right partner, faster.</p>
         </a>
         <a className="svc-card" href="/services/digital-marketing">
-          <span className="svc-icon"><span className="fallback">📈</span><SmartImage src="/assets/s3.png" alt="" /></span>
+          <span className="svc-icon"><span className="fallback"><Icon name="trending" size={70} /></span><SmartImage src="/assets/s3.png" alt="" /></span>
           <h3>Digital Marketing</h3>
           <p>Full-funnel campaigns that drive qualified traffic into the network from day one.</p>
         </a>
@@ -219,7 +220,7 @@ export default function Page() {
     </div>
   </section>
 
-  <Testimonials heading="What Our Partners Say" sub="Real relationships on both sides of the network — advertisers buying quality and publishers getting paid for it." start={0} count={3} />
+  <Testimonials heading="What Our Partners Say" sub="Real relationships on both sides of the network — advertisers buying quality and publishers getting paid for it." start={0} count={6} perView={3} />
 
   {/* Network reach — circle collage (old-site audience overview data) */}
   <section className="section channels-sec">

@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import PageBanner from "@/components/PageBanner";
+import ReadyBand from "@/components/ReadyBand";
 
 export const metadata: Metadata = {
   title: "Publisher Requirements \u2014 Standards & Obligations",
@@ -9,14 +11,7 @@ export default function Page() {
   return (
     <>
 
-  <section className="page-hero">
-    <div className="container">
-      <nav className="breadcrumb"><a href="/">Home</a> / <a href="/publishers">Publishers</a> / <span>Requirements</span></nav>
-      <span className="eyebrow">For Publishers</span>
-      <h1>The standards that keep payouts high.</h1>
-      <p className="lead">Advertisers pay premium rates because this network filters hard. These are the rules — read them before applying, because we enforce them after.</p>
-    </div>
-  </section>
+  <PageBanner crumb="REQUIREMENTS" title={<>The standards that keep payouts high.</>} desc={<>Advertisers pay premium rates because this network filters hard. These are the rules — read them before applying, because we enforce them after.</>} />
 
   <section className="section">
     <div className="container narrow">
@@ -60,16 +55,7 @@ export default function Page() {
       <p className="small muted" style={{ marginTop: "14px" }}>Vetting and ongoing monitoring are described publicly on the <a href="/compliance/publisher-vetting">publisher vetting</a> page.</p>
     </div>
   </section>
-
-  <section className="final-cta">
-    <div className="container center">
-      <h2>Comfortable with the bar? Good — it's what keeps rates premium.</h2>
-      <div className="cta-row" style={{ justifyContent: "center", marginTop: "24px" }}>
-        <a className="btn btn-primary btn-lg" href="/publishers/apply">Apply as a publisher</a>
-        <a className="btn btn-secondary btn-lg" href="/publishers/campaigns">See campaign categories</a>
-      </div>
-    </div>
-  </section>
+      <ReadyBand heading={"Comfortable with the bar? Good — it's what keeps rates premium."} />
     </>
   );
 }

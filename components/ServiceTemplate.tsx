@@ -3,6 +3,7 @@ import ReadyBand from "@/components/ReadyBand";
 import Testimonials from "@/components/Testimonials";
 import data from "@/public/assets/data.json";
 import PageBanner from "@/components/PageBanner";
+import Icon from "@/components/Icon";
 
 export type ServiceData = {
   crumb: string;
@@ -76,7 +77,7 @@ export default function ServiceTemplate({ d }: { d: ServiceData }) {
           <div className="grid cols-2 sp-feat-grid">
             {d.features.map((f, i) => (
               <div className="sp-feat" key={f.title}>
-                <span className={`fb fb-${i % 4}`}>{f.icon}</span>
+                <span className={`fb fb-${i % 4}`}><Icon name={f.icon} size={62} /></span>
                 <h3>{f.title}</h3>
                 <p>{f.desc}</p>
               </div>
@@ -148,7 +149,8 @@ export default function ServiceTemplate({ d }: { d: ServiceData }) {
         heading={d.testiHeading ?? "What Partners Say"}
         sub="Feedback from advertisers and publishers running on the network."
         start={d.testiStart ?? 0}
-        count={3}
+        count={6}
+        perView={3}
         scribble={false}
       />
 
