@@ -69,3 +69,4 @@ static-site-v1/         The original no-build HTML version, kept for reference (
 | `--bg` / `--bg-alt` | `#0A0711` / `#0F0B1A` | Page / alternate sections |
 | `--surface` / `--surface-2` | `#151021` / `#1C1530` | Cards / elevated surfaces |
 | `--text` / `--text-2` / `--text-3` | light → muted | Type hierarchy |
+# CCM
