@@ -1,0 +1,17 @@
+<svg viewBox="0 0 430 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CCM">
+  <!-- Recreated placeholder of the CCM brand mark. Replace this file with the
+       original vector logo when available; header/footer use the same shape. -->
+  <defs>
+    <linearGradient id="ccmg" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="430" y2="160">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset=".38" stop-color="#DCD2FF"/>
+      <stop offset=".68" stop-color="#A78BFA"/>
+      <stop offset="1" stop-color="#6D28D9"/>
+    </linearGradient>
+  </defs>
+  <g fill="url(#ccmg)" stroke="#0A0711" stroke-width="7" paint-order="stroke">
+    <path d="M150,4 L80,4 A76,76 0 0 0 80,156 L150,156 L150,122 L80,122 A42,42 0 0 1 80,38 L150,38 Z"/>
+    <path d="M262,4 L192,4 A76,76 0 0 0 192,156 L262,156 L262,122 L192,122 A42,42 0 0 1 192,38 L262,38 Z"/>
+    <path d="M254,156 L254,4 L288,4 L332,66 L376,4 L410,4 L410,156 L376,156 L376,62 L332,124 L288,62 L288,156 Z"/>
+  </g>
+</svg>

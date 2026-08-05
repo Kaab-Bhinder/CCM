@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact CCM — Advertiser, Publisher & General Inquiries | CCM</title>
+<meta name="description" content="Contact CCM: advertiser inquiries routed to sales, publisher inquiries to the application, and general questions answered within one business day.">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-root="../" data-section="company">
+<div id="site-header"></div>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb"><a href="../index.html">Home</a> / <a href="about.html">Company</a> / <span>Contact</span></nav>
+      <span class="eyebrow">Contact</span>
+      <h1>Three doors. Pick the right one and it's faster.</h1>
+      <p class="lead">Each path routes to a different team — that's why this isn't one generic form.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <!-- Router tabs -->
+      <div class="related" style="margin-bottom:34px;" id="contact-tabs">
+        <a href="#advertiser-form" data-tab="advertiser" class="active" style="border-color:var(--purple); color:var(--text);">Advertiser inquiry</a>
+        <a href="#publisher-panel" data-tab="publisher">Publisher inquiry</a>
+        <a href="#general-form" data-tab="general">General inquiry</a>
+      </div>
+
+      <!-- Advertiser: routed to sales, vertical + volume fields (per IA spec) -->
+      <div id="advertiser-form" class="contact-panel">
+        <div class="form-card" style="max-width:760px;">
+          <h3 style="margin-bottom:8px;">Advertiser inquiry</h3>
+          <p class="small muted" style="margin-bottom:24px;">Routes to sales. Response within one business day.</p>
+          <form class="js-demo-form form-grid" action="#" method="post">
+            <div class="field"><label for="c-name">Full name *</label><input id="c-name" type="text" required></div>
+            <div class="field"><label for="c-company">Company *</label><input id="c-company" type="text" required></div>
+            <div class="field"><label for="c-email">Work email *</label><input id="c-email" type="email" required></div>
+            <div class="field"><label for="c-phone">Phone</label><input id="c-phone" type="tel"></div>
+            <div class="field"><label for="c-vertical">Vertical *</label>
+              <select id="c-vertical"><option>Auto insurance</option><option>Medicare</option><option>ACA</option><option>Final expense</option><option>Other / multiple</option></select>
+            </div>
+            <div class="field"><label for="c-volume">Monthly volume / budget *</label>
+              <select id="c-volume"><option>Under $10k</option><option>$10k–$50k</option><option>$50k–$250k</option><option>$250k+</option></select>
+            </div>
+            <div class="field full"><label for="c-msg">What do you need?</label><textarea id="c-msg" placeholder="Calls or leads, states, capacity, timelines…"></textarea></div>
+            <div class="full"><button class="btn btn-primary btn-lg" type="submit">Send to sales</button></div>
+            <div class="form-success full">Received — sales will reply within one business day. <em>(Demo form — no backend wired yet.)</em></div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Publisher: redirect to apply (per IA spec) -->
+      <div id="publisher-panel" class="contact-panel" style="display:none;">
+        <div class="form-card" style="max-width:760px;">
+          <h3 style="margin-bottom:8px;">Publisher inquiry</h3>
+          <p class="muted" style="margin-bottom:22px;">Publishers don't fill out a contact form here — the <strong>application</strong> is the fast path, reviewed by the partnerships team in 2–3 business days.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary btn-lg" href="../publishers/apply.html">Go to the publisher application</a>
+            <a class="btn btn-ghost" href="../publishers/payouts.html">Check payout terms first →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- General -->
+      <div id="general-form" class="contact-panel" style="display:none;">
+        <div class="form-card" style="max-width:760px;">
+          <h3 style="margin-bottom:8px;">General inquiry</h3>
+          <p class="small muted" style="margin-bottom:24px;">Press, partnerships, privacy requests, careers, everything else.</p>
+          <form class="js-demo-form form-grid" action="#" method="post">
+            <div class="field"><label for="g-name">Name *</label><input id="g-name" type="text" required></div>
+            <div class="field"><label for="g-email">Email *</label><input id="g-email" type="email" required></div>
+            <div class="field full"><label for="g-topic">Topic</label>
+              <select id="g-topic"><option>General question</option><option>Enterprise partnership</option><option>Press / media</option><option>Privacy / data request</option><option>Careers</option></select>
+            </div>
+            <div class="field full"><label for="g-msg">Message *</label><textarea id="g-msg" required></textarea></div>
+            <div class="full"><button class="btn btn-primary btn-lg" type="submit">Send</button></div>
+            <div class="form-success full">Received — we'll reply within one business day. <em>(Demo form — no backend wired yet.)</em></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="grid cols-4">
+        <div class="card"><h3>Phone</h3><p>[+1 (555) 000-0000]<br><span class="small muted">Replace with real number</span></p></div>
+        <div class="card"><h3>Email</h3><p>[hello@ccm.example]<br><span class="small muted">Replace with real address</span></p></div>
+        <div class="card"><h3>Office</h3><p>[Street, City, State]<br><span class="small muted">Replace with real address</span></p></div>
+        <div class="card"><h3>Response time</h3><p>One business day for advertiser and general inquiries; 2–3 days for publisher applications.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script src="../assets/js/main.js"></script>
+<script>
+(function () {
+  var tabs = document.querySelectorAll("#contact-tabs a");
+  var panels = document.querySelectorAll(".contact-panel");
+  tabs.forEach(function (t) {
+    t.addEventListener("click", function (e) {
+      e.preventDefault();
+      tabs.forEach(function (x) { x.classList.remove("active"); x.style.borderColor = ""; x.style.color = ""; });
+      t.classList.add("active"); t.style.borderColor = "var(--purple)"; t.style.color = "var(--text)";
+      panels.forEach(function (p) { p.style.display = "none"; });
+      document.getElementById(t.getAttribute("href").slice(1)).style.display = "";
+    });
+  });
+})();
+</script>
+</body>
+</html>

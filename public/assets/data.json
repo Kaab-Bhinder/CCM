@@ -1,0 +1,74 @@
+{
+  "_note": "Edit this file to update testimonials, team, stats, and case studies site-wide. Numbers here should be ones you can actually defend.",
+  "stats": [
+    { "value": "250K+", "label": "Calls & leads routed" },
+    { "value": "300+", "label": "Vetted publishers" },
+    { "value": "4", "label": "Insurance verticals" },
+    { "value": "50", "label": "States covered" }
+  ],
+  "team": {
+    "founder": {
+      "name": "Abdullah",
+      "role": "Founder",
+      "img": "/images/team/abdullah.png",
+      "bio": "Started Close Crew as a hands-on performance marketing team, and built it into a network by doing the unglamorous work first: vetting publishers, tightening call quality, and getting compliance right before scaling volume."
+    },
+    "ceo": {
+      "name": "Syed Wahaj",
+      "role": "Co-Founder & CEO",
+      "img": "/images/team/wahaj-shah.jpeg",
+      "message": "We built Close Crew because both sides of this market deserved better. Advertisers were tired of paying for recycled data, and publishers were tired of opaque payouts and slow payments. Our answer is simple: vet every publisher before they route a single call, show advertisers exactly what they're paying for, and pay partners on the terms we publish. We would rather grow slower with sources we trust than scale fast on volume we can't stand behind."
+    }
+  },
+  "testimonials": [
+    {
+      "name": "Marcus Chen",
+      "role": "VP of Growth",
+      "company": "Regional insurance agency",
+      "quote": "The call quality held up as we scaled, which is not what we'd seen elsewhere. When a source started slipping, their team flagged it before we did.",
+      "rating": 5
+    },
+    {
+      "name": "Priya Raman",
+      "role": "Media Buyer",
+      "company": "Publisher partner",
+      "quote": "Payouts land on the schedule they publish, and the portal shows why every call qualified or didn't. That transparency is the reason we kept scaling with them.",
+      "rating": 5
+    },
+    {
+      "name": "David Okafor",
+      "role": "Director of Acquisition",
+      "company": "Medicare-focused agency",
+      "quote": "Their AEP capacity planning was the difference for us. We agreed pacing in August instead of scrambling in October, and our agents stayed busy without drowning.",
+      "rating": 5
+    },
+    {
+      "name": "Sarah Whitfield",
+      "role": "Compliance Officer",
+      "company": "National carrier",
+      "quote": "Consent records and call recordings were produced the same day we asked. For a lead source, that alone puts them ahead of most vendors we review.",
+      "rating": 5
+    },
+    {
+      "name": "Tomás Herrera",
+      "role": "Founder",
+      "company": "Traffic partner",
+      "quote": "Straight answers on what traffic they accept and what they don't. We knew where we stood before we sent a single click.",
+      "rating": 5
+    },
+    {
+      "name": "Alicia Brooks",
+      "role": "Head of Marketing",
+      "company": "Final expense IMO",
+      "quote": "Persistency improved once we switched to their consented inbound calls. Fewer leads, better conversations, better book.",
+      "rating": 5
+    }
+  ],
+  "caseStudies": [
+    { "tag": "Auto Insurance", "stat": "−22%", "statLabel": "Cost per qualified call", "title": "22% Lower Cost Per Qualified Call", "desc": "State-level filtering and buffer tuning brought an auto insurance advertiser's acquisition cost down while volume held steady.", "img": "/images/case-1.jpg" },
+    { "tag": "Medicare", "stat": "2x", "statLabel": "Publisher base", "title": "Doubled Publisher Base in Six Months", "desc": "Expanding a Medicare advertiser's supply without loosening the quality bar that made the program work.", "img": "/images/case-2.jpg" },
+    { "tag": "Final Expense", "stat": "88%", "statLabel": "Call qualification rate", "title": "88% Call Qualification Rate", "desc": "Tighter call verification and creative standards produced consistently sales-ready conversations.", "img": "/images/case-3.jpg" },
+    { "tag": "ACA", "stat": "<30", "statLabel": "Days to first qualified call", "title": "Ramped a New Vertical in Under 30 Days", "desc": "Standing up a compliant ACA calling program from scratch, from publisher onboarding to first qualified call.", "img": "/images/case-4.jpg" },
+    { "tag": "Digital Marketing", "stat": "−31%", "statLabel": "Cost per lead", "title": "31% Improvement in Cost Per Lead", "desc": "Rebuilding a paid social funnel and landing page experience to lift lead quality without raising spend.", "img": "/images/case-5.jpg" }
+  ]
+}

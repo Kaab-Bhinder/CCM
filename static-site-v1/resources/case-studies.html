@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Studies — Results With Numbers | CCM</title>
+<meta name="description" content="CCM case studies filterable by vertical and audience: challenge, approach, services used, and the result — with a number.">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-root="../" data-section="resources">
+<div id="site-header"></div>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb"><a href="../index.html">Home</a> / <a href="index.html">Resources</a> / <span>Case studies</span></nav>
+      <span class="eyebrow">Case Studies</span>
+      <h1>Results, with the numbers attached.</h1>
+      <p class="lead">Filter by vertical or audience. Every study names the challenge, the approach, the services used, and the result. <!-- All studies below are PLACEHOLDERS — replace with real, client-approved stories before launch. --></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="related" style="margin:0 0 30px;" id="cs-filters">
+        <a href="#" data-filter="all" class="active" style="border-color:var(--purple); color:var(--text);">All</a>
+        <a href="#" data-filter="medicare">Medicare</a>
+        <a href="#" data-filter="auto">Auto insurance</a>
+        <a href="#" data-filter="aca">ACA</a>
+        <a href="#" data-filter="final-expense">Final expense</a>
+        <a href="#" data-filter="advertiser">Advertiser-side</a>
+        <a href="#" data-filter="publisher">Publisher-side</a>
+      </div>
+
+      <div class="grid cols-3" id="cs-grid">
+        <div class="card" data-tags="medicare advertiser">
+          <span class="badge">Medicare · Advertiser</span>
+          <h3 style="margin-top:12px;">−42% cost per enrollment in one AEP</h3>
+          <p><strong>Challenge:</strong> agent hours wasted on unqualified calls.<br><strong>Approach:</strong> warm transfers + AI pre-qualification paced to staffing.<br><strong>Services:</strong> <a href="../services/pay-per-call.html">Pay per call</a>, <a href="../services/ai-automation.html">AI automation</a>.</p>
+          <a class="card-link" href="../industries/medicare.html">Medicare vertical</a>
+        </div>
+        <div class="card" data-tags="auto advertiser">
+          <span class="badge">Auto · Advertiser</span>
+          <h3 style="margin-top:12px;">2.7× ROAS on qualified inbound calls</h3>
+          <p><strong>Challenge:</strong> unwritable risks flooding agent queues.<br><strong>Approach:</strong> state-level filters + buffer tuning to appetite.<br><strong>Services:</strong> <a href="../services/pay-per-call.html">Pay per call</a>.</p>
+          <a class="card-link" href="../industries/auto-insurance.html">Auto vertical</a>
+        </div>
+        <div class="card" data-tags="aca advertiser">
+          <span class="badge">ACA · Advertiser</span>
+          <h3 style="margin-top:12px;">+31% connect rate through OEP</h3>
+          <p><strong>Challenge:</strong> volume peaking when agents weren't staffed.<br><strong>Approach:</strong> dayparting rebuilt around staffing curves.<br><strong>Services:</strong> <a href="../services/pay-per-call.html">Pay per call</a>, <a href="../services/digital-marketing.html">Digital marketing</a>.</p>
+          <a class="card-link" href="../industries/aca.html">ACA vertical</a>
+        </div>
+        <div class="card" data-tags="final-expense advertiser">
+          <span class="badge">Final Expense · Advertiser</span>
+          <h3 style="margin-top:12px;">+18pts 13-month persistency</h3>
+          <p><strong>Challenge:</strong> aged-data leads lapsing by month three.<br><strong>Approach:</strong> consented inbound calls under strict creative standards.<br><strong>Services:</strong> <a href="../services/pay-per-call.html">Pay per call</a>, <a href="../advertisers/lead-quality.html">Quality controls</a>.</p>
+          <a class="card-link" href="../industries/final-expense.html">Final expense vertical</a>
+        </div>
+        <div class="card" data-tags="medicare publisher">
+          <span class="badge">Medicare · Publisher</span>
+          <h3 style="margin-top:12px;">+64% RPM after joining for AEP</h3>
+          <p><strong>Challenge:</strong> a content publisher underpaid on remnant demand.<br><strong>Approach:</strong> direct campaign access with transparent buffer terms.<br><strong>Services:</strong> <a href="../publishers/campaigns.html">Campaign categories</a>.</p>
+          <a class="card-link" href="../publishers/index.html">Publisher overview</a>
+        </div>
+        <div class="card" data-tags="aca publisher">
+          <span class="badge">ACA · Publisher</span>
+          <h3 style="margin-top:12px;">Payout discrepancies to zero in 2 cycles</h3>
+          <p><strong>Challenge:</strong> reconciliation fights eating margin at a prior network.<br><strong>Approach:</strong> event-level portal accrual + written cycle statements.<br><strong>Services:</strong> <a href="../publishers/payouts.html">Payouts &amp; terms</a>.</p>
+          <a class="card-link" href="../publishers/index.html">Publisher overview</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container center">
+      <h2>Get similar results.</h2>
+      <p class="muted" style="margin:12px 0 28px;">Every one of these started with a scoped pilot.</p>
+      <div class="cta-row" style="justify-content:center;">
+        <a class="btn btn-primary btn-lg" href="../company/contact.html">Talk to sales</a>
+        <a class="btn btn-secondary btn-lg" href="../services/index.html">Explore services</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script src="../assets/js/main.js"></script>
+<script>
+(function () {
+  var filters = document.querySelectorAll("#cs-filters a");
+  var cards = document.querySelectorAll("#cs-grid .card");
+  filters.forEach(function (f) {
+    f.addEventListener("click", function (e) {
+      e.preventDefault();
+      filters.forEach(function (x) { x.classList.remove("active"); x.style.borderColor = ""; x.style.color = ""; });
+      f.classList.add("active"); f.style.borderColor = "var(--purple)"; f.style.color = "var(--text)";
+      var tag = f.getAttribute("data-filter");
+      cards.forEach(function (c) {
+        c.style.display = (tag === "all" || (c.getAttribute("data-tags") || "").indexOf(tag) !== -1) ? "" : "none";
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>
