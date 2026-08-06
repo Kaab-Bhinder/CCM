@@ -30,6 +30,19 @@ export const metadata: Metadata = {
   },
   description:
     "Close Crew connects advertisers to high-intent consumers through a trusted publisher network, powered by Pay Per Call, AI Automation, and Digital Marketing.",
+  metadataBase: new URL("https://www.closecrewmarketing.com"),
+  keywords: [
+    "performance marketing", "pay per call", "publisher network",
+    "AI automation", "lead generation", "insurance leads",
+  ],
+  openGraph: {
+    type: "website",
+    siteName: "Close Crew",
+    title: "Close Crew — Performance Marketing Network",
+    description:
+      "Connecting advertisers to high-intent consumers through a trusted publisher network.",
+  },
+  robots: "index, follow",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

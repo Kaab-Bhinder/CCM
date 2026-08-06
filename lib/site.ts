@@ -3,20 +3,19 @@
    Edit navigation and footer links HERE, in one place.
    ============================================================ */
 
-// Utility-bar contact info — REPLACE with real details (shown on every page).
+// Business details — shown on every page. Single source of truth.
 export const CONTACT = {
-  phone: "(000) 000-0000",
-  phoneHref: "tel:+10000000000",
-  email: "contact@closecrewmarketing.com",
-  address: "Lake Forest Drive, Round Rock, Texas 78665 USA",
+  phone: "+1 804 208 9767",
+  phoneHref: "tel:+18042089767",
+  email: "sales@closecrewmarketing.com",
+  address: "804 Boulders Springs Drive, Richmond, Virginia 23225",
+  addressShort: "Richmond, Virginia",
+  linkedin: "https://www.linkedin.com/company/closecrewmarketing/",
 };
 
-// Social links — point at real profiles (utility bar, every page).
+// Social profiles — only the ones that actually exist.
 export const SOCIALS: { label: string; href: string }[] = [
-  { label: "Facebook", href: "#" },
-  { label: "Instagram", href: "#" },
   { label: "LinkedIn", href: "https://www.linkedin.com/company/closecrewmarketing/" },
-  { label: "X", href: "#" },
 ];
 
 export type NavChild = { label: string; href: string; external?: boolean } | { sep: true };

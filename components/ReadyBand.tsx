@@ -1,3 +1,5 @@
+import { CONTACT } from "@/lib/site";
+
 /* Dark pre-footer CTA band — reused on the homepage and service pages. */
 export default function ReadyBand({
   heading = "Ready to Grow Through\nPerformance?",
@@ -27,7 +29,7 @@ export default function ReadyBand({
           <span className="rb-ic">
             <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#D8C8FF" strokeWidth="1.6"><rect x="2.5" y="4.5" width="19" height="15" rx="3" /><path d="M3,6 l9,7 9,-7" /></svg>
           </span>
-          <a className="rb-big" href="mailto:contact@closecrewmarketing.com">contact@<wbr />closecrewmarketing.com</a>
+          <a className="rb-big" href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
           <span className="rb-note">(We reply within one business day)</span>
         </div>
       </div>

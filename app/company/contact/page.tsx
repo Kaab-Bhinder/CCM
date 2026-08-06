@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import SmartImage from "@/components/SmartImage";
 import PageBanner from "@/components/PageBanner";
+import { CONTACT } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -63,17 +64,17 @@ export default function Page() {
       <section className="contact-band">
         <span className="cb-spark" aria-hidden="true">✳</span>
         <div className="container">
-          <div className="grid cols-3 cb-grid">
-            <a className="cb-card" href="mailto:contact@closecrewmarketing.com">
+          <div className="grid cols-4 cb-grid">
+            <a className="cb-card" href={`mailto:${CONTACT.email}`}>
               <span className="cb-ic">
                 <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#171130" strokeWidth="1.8"><rect x="2.5" y="4.5" width="19" height="15" rx="3" /><path d="M3,6 l9,7 9,-7" /></svg>
               </span>
               <div>
                 <span className="cb-label">Email Us</span>
-                <span className="cb-value">contact@<wbr />closecrewmarketing.com</span>
+                <span className="cb-value">{CONTACT.email}</span>
               </div>
             </a>
-            <a className="cb-card" href="https://www.linkedin.com/company/closecrewmarketing/" target="_blank" rel="noopener noreferrer">
+            <a className="cb-card" href={CONTACT.linkedin} target="_blank" rel="noopener noreferrer">
               <span className="cb-ic">
                 <svg viewBox="0 0 24 24" width="20" height="20" fill="#171130"><path d="M5 3.5A2 2 0 1 1 5 7.6a2 2 0 0 1 0-4.1zM3.2 9h3.6v12H3.2V9zm6 0h3.5v1.8h.1c.5-.9 1.7-1.9 3.5-1.9 3.7 0 4.4 2.4 4.4 5.5V21h-3.6v-5.9c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1V21H9.2V9z" /></svg>
               </span>
@@ -82,13 +83,22 @@ export default function Page() {
                 <span className="cb-value">closecrewmarketing</span>
               </div>
             </a>
+            <a className="cb-card" href={CONTACT.phoneHref}>
+              <span className="cb-ic">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#171130" strokeWidth="1.8" strokeLinecap="round"><path d="M6.8 10.6c1.4 2.8 3.8 5.2 6.6 6.6l2.1-2.1c.3-.3.7-.4 1.1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .5 1 1v3.4c0 .6-.5 1-1 1C11 21 3 13 3 3.2c0-.6.5-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1.1l-2 2.1z" /></svg>
+              </span>
+              <div>
+                <span className="cb-label">Call Us</span>
+                <span className="cb-value">{CONTACT.phone}</span>
+              </div>
+            </a>
             <div className="cb-card">
               <span className="cb-ic">
                 <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#171130" strokeWidth="1.8"><path d="M12 21s-7-6.5-7-11.5a7 7 0 0 1 14 0C19 14.5 12 21 12 21z" /><circle cx="12" cy="9.5" r="2.6" /></svg>
               </span>
               <div>
                 <span className="cb-label">Visit Us</span>
-                <span className="cb-value">Lake Forest Drive, Round Rock, Texas 78665 USA</span>
+                <span className="cb-value">{CONTACT.address}</span>
               </div>
             </div>
           </div>
