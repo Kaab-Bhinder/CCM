@@ -28,15 +28,17 @@ export default function Page() {
             <h2>Send Us a Message</h2>
             <p className="cf-sub">Tell us what you&apos;re trying to do — a real person replies within one business day.</p>
             <div className="cf-card">
-              <form className="js-demo-form" action="#" method="post">
+              <form className="site-form" data-form="Contact" action="/api/submit" method="post">
                 <label htmlFor="cf-name">Name*</label>
-                <input id="cf-name" type="text" placeholder="First Name" required />
+                <input id="cf-name" name="Name" type="text" placeholder="First Name" required />
                 <label htmlFor="cf-mail">Your E-Mail*</label>
-                <input id="cf-mail" type="email" placeholder="Enter E-Mail" required />
+                <input id="cf-mail" name="Email" type="email" placeholder="Enter E-Mail" required />
                 <label htmlFor="cf-msg">Comment*</label>
-                <textarea id="cf-msg" placeholder="Write Comment" required></textarea>
+                <textarea id="cf-msg" name="Message" placeholder="Write Comment" required></textarea>
+                <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hp-field" />
                 <button className="btn btn-primary btn-round cf-submit" type="submit">Submit Now</button>
-                <div className="form-success">Received — we&apos;ll reply within one business day. <em>(Demo form — no backend wired yet.)</em></div>
+                <p className="form-status" role="status" aria-live="polite"></p>
+                <div className="form-success">Received — we&apos;ll reply within one business day.</div>
               </form>
             </div>
             <p className="cf-note">Publisher looking to join the network? <a href="/publishers/apply">Apply directly →</a></p>

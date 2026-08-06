@@ -37,7 +37,7 @@ export default function Page() {
         <li><strong>Evidencable consent</strong> for every call and lead — method, timestamp, and the exact language shown, retained and producible on request.</li>
         <li><strong>Clear disclosures</strong> on landing pages: who is collecting data, who may contact the consumer, and how.</li>
         <li><strong>DNC compliance</strong> for any outbound dialing, with scrub logs available for audit.</li>
-        <li>Full detail in our <a href="/compliance/consent">consent &amp; TCPA practices</a> and the <a href="/legal/publisher-agreement">publisher agreement</a>.</li>
+        <li>Full detail in our consent &amp; TCPA practices and the publisher agreement.</li>
       </ul>
 
       <div className="section-head" style={{ marginTop: "48px" }}><span className="eyebrow">Enforcement</span><h2>What gets an account suspended.</h2></div>
@@ -52,7 +52,7 @@ export default function Page() {
           </tbody>
         </table>
       </div>
-      <p className="small muted" style={{ marginTop: "14px" }}>Vetting and ongoing monitoring are described publicly on the <a href="/compliance/publisher-vetting">publisher vetting</a> page.</p>
+      <p className="small muted" style={{ marginTop: "14px" }}>Vetting and ongoing monitoring are described publicly on the publisher vetting page.</p>
     </div>
   </section>
       <ReadyBand heading={"Comfortable with the bar? Good — it's what keeps rates premium."} />

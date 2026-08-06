@@ -80,7 +80,6 @@ export const NAV: NavItem[] = [
       { label: "Insights", href: "/resources/insights" },
       { label: "Compliance", href: "/compliance" },
       { label: "FAQs", href: "/resources/faqs" },
-      { label: "Glossary", href: "/resources/glossary" },
     ],
   },
   {
@@ -127,7 +126,6 @@ export const FOOTER_COLS: { title: string; links: { label: string; href: string 
       { label: "Case studies", href: "/resources/case-studies" },
       { label: "Insights", href: "/resources/insights" },
       { label: "FAQs", href: "/resources/faqs" },
-      { label: "Glossary", href: "/resources/glossary" },
     ],
   },
   {

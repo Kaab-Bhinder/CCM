@@ -15,7 +15,7 @@ export default function Page() {
   <section className="section">
     <div className="container prose">
       <p className="updated">Effective: [DATE] · Review cadence: quarterly — <strong>counsel review required before publishing and at each cadence.</strong></p>
-      <div className="notice"><strong>Legal scaffold — counsel must draft the final text.</strong> Operational description lives at <a href="/compliance/consent">consent &amp; TCPA practices</a>; this document is the binding policy version.</div>
+      <div className="notice"><strong>Legal scaffold — counsel must draft the final text.</strong> Operational description lives at consent &amp; TCPA practices; this document is the binding policy version.</div>
 
       <h2>1. Consent standard</h2><p>[One-to-one consent definition, affirmative action requirement, prohibited patterns (pre-checked boxes, bundled consent).]</p>
       <h2>2. Required disclosures</h2><p>[Identity of collector, contacting parties, channels, message/data rates, vertical-specific language (e.g., TPMO).]</p>

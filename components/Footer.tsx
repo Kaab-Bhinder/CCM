@@ -58,10 +58,12 @@ export default function Footer() {
           </div>
           <div className="f2-col">
             <h4>Newsletter</h4>
-            <form className="js-demo-form f2-news" action="#" method="post">
-              <input type="email" required placeholder="Enter Your Email..." aria-label="Email" />
+            <form className="site-form f2-news" data-form="Newsletter" action="/api/submit" method="post">
+              <input type="email" name="Email" required placeholder="Enter Your Email..." aria-label="Email" />
+              <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hp-field" />
               <button className="f2-sub" type="submit">Subscribe</button>
-              <div className="form-success">Subscribed. <em>(Demo form — no backend wired yet.)</em></div>
+              <div className="form-success">Subscribed — thanks.</div>
+              <p className="form-status" role="status" aria-live="polite"></p>
             </form>
             <p className="f2-small">Occasional network insights and campaign openings. No spam.</p>
           </div>

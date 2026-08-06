@@ -4,7 +4,6 @@ import SmartImage from "@/components/SmartImage";
 import ReadyBand from "@/components/ReadyBand";
 import Testimonials from "@/components/Testimonials";
 import data from "@/public/assets/data.json";
-import Icon from "@/components/Icon";
 
 export const metadata: Metadata = {
   title: "About",
@@ -12,12 +11,12 @@ export const metadata: Metadata = {
 };
 
 const VALUES = [
-  { icon: "fire", title: "Passion-Driven", desc: "We live and breathe your success." },
-  { icon: "medal", title: "Excellence First", desc: "Quality is never negotiable." },
-  { icon: "handshake", title: "Trust & Integrity", desc: "Your success is our reputation." },
-  { icon: "compass", title: "Strategic Vision", desc: "Long-term thinking, immediate results." },
-  { icon: "lightbulb", title: "Innovation Focus", desc: "Cutting-edge solutions for modern challenges." },
-  { icon: "check-circle", title: "Results Guaranteed", desc: "We deliver what we promise." },
+  { title: "Passion-Driven", desc: "We live and breathe your success." },
+  { title: "Excellence First", desc: "Quality is never negotiable." },
+  { title: "Trust & Integrity", desc: "Your success is our reputation." },
+  { title: "Strategic Vision", desc: "Long-term thinking, immediate results." },
+  { title: "Innovation Focus", desc: "Cutting-edge solutions for modern challenges." },
+  { title: "Results Guaranteed", desc: "We deliver what we promise." },
 ];
 
 export default function Page() {
@@ -90,15 +89,15 @@ export default function Page() {
             <h2><img className="svc-scribble" src="/assets/border.png" alt="" />What We Stand For</h2>
             <img className="mini-flower" src="/assets/flower1-purple.png" alt="" aria-hidden="true" />
           </div>
-          <div className="grid cols-3 val-grid">
+          <ol className="values-list">
             {VALUES.map((v, i) => (
-              <div className={`val-card vc-${i % 3}`} key={v.title}>
-                <span className="val-ic"><Icon name={v.icon} size={58} /></span>
+              <li key={v.title}>
+                <span className="vl-n">{String(i + 1).padStart(2, "0")}</span>
                 <h3>{v.title}</h3>
                 <p>{v.desc}</p>
-              </div>
+              </li>
             ))}
-          </div>
+          </ol>
         </div>
       </section>
 

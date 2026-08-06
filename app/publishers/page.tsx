@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import SolutionTemplate, { type SolutionData } from "@/components/SolutionTemplate";
-import SubNav from "@/components/SubNav";
 
 export const metadata: Metadata = {
   title: "For Publishers",
@@ -51,14 +50,5 @@ const d: SolutionData = {
 };
 
 export default function Page() {
-  return <SolutionTemplate d={d} extra={
-    <SubNav
-        title="More for Publishers"
-        links={[
-          { label: "Campaign Categories", href: "/publishers/campaigns", desc: "Live categories by vertical with payout types, traffic, and caps." },
-          { label: "Requirements", href: "/publishers/requirements", desc: "Traffic standards, prohibited methods, and consent obligations." },
-          { label: "Apply", href: "/publishers/apply", desc: "The application form — answered in 2–3 business days." },
-        ]}
-      />
-  } />;
+  return <SolutionTemplate d={d} />;
 }

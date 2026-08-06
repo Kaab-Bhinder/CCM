@@ -1,29 +1,5 @@
-/* Shared page banner — animated paper hero used on every interior page.
-   All decor is drawn in code (no image assets) so it scales cleanly. */
-
-function Flower({ className, petals = 8, color }: { className: string; petals?: number; color: string }) {
-  const p = Array.from({ length: petals }, (_, i) => (360 / petals) * i);
-  return (
-    <svg className={className} viewBox="0 0 100 100" aria-hidden="true">
-      <g transform="translate(50 50)">
-        {p.map((deg) => (
-          <ellipse key={deg} rx="11" ry="30" fill={color} opacity=".85" transform={`rotate(${deg})`} />
-        ))}
-        <circle r="9" fill="#fff" opacity=".9" />
-        <circle r="4.5" fill={color} />
-      </g>
-    </svg>
-  );
-}
-
-function OrbitRing({ className, dot }: { className: string; dot: string }) {
-  return (
-    <svg className={className} viewBox="0 0 120 120" aria-hidden="true">
-      <circle cx="60" cy="60" r="52" fill="none" stroke="currentColor" strokeWidth="1.4" strokeDasharray="5 8" opacity=".5" />
-      <circle cx="60" cy="8" r="6" fill={dot} />
-    </svg>
-  );
-}
+/* Shared page banner — restrained, corporate. Thin architectural line work,
+   a muted brand wash, and quiet entrance motion. No decorative clutter. */
 
 export default function PageBanner({
   crumb,
@@ -38,47 +14,29 @@ export default function PageBanner({
 }) {
   return (
     <section className="pb-hero">
-      {/* dashed curves */}
-      <svg className="pb-curve pb-curve-l" viewBox="0 0 300 220" aria-hidden="true">
-        <path d="M6,206 C36,96 156,36 292,64" fill="none" stroke="#171130" strokeWidth="1.5" strokeDasharray="6 9" opacity=".3" />
+      {/* concentric hairline arcs — architectural, slow drift */}
+      <svg className="pb-arcs" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g fill="none" stroke="currentColor">
+          <circle cx="140" cy="80" r="150" strokeWidth=".7" opacity=".22" />
+          <circle cx="140" cy="80" r="240" strokeWidth=".7" opacity=".14" />
+          <circle cx="1070" cy="330" r="180" strokeWidth=".7" opacity=".2" />
+          <circle cx="1070" cy="330" r="270" strokeWidth=".7" opacity=".12" />
+          <line x1="0" y1="330" x2="1200" y2="330" strokeWidth=".7" opacity=".1" />
+        </g>
       </svg>
-      <svg className="pb-curve pb-curve-r" viewBox="0 0 300 220" aria-hidden="true">
-        <path d="M294,20 C210,44 250,140 120,168 C74,178 58,200 74,216" fill="none" stroke="#171130" strokeWidth="1.5" strokeDasharray="6 9" opacity=".28" />
-      </svg>
 
-      {/* revolving flowers */}
-      <Flower className="pbf pbf-1" color="#8B5CF6" petals={8} />
-      <Flower className="pbf pbf-2" color="#6FCF97" petals={6} />
-      <Flower className="pbf pbf-3" color="#E9B949" petals={10} />
-      <Flower className="pbf pbf-4" color="#C4B5FD" petals={6} />
-      <Flower className="pbf pbf-5" color="#7C3AED" petals={12} />
-
-      {/* orbit rings with travelling dots */}
-      <OrbitRing className="pb-orbit pb-orbit-l" dot="#8B5CF6" />
-      <OrbitRing className="pb-orbit pb-orbit-r" dot="#6FCF97" />
-
-      {/* floating geometry */}
-      <span className="pb-geo pb-sq" aria-hidden="true"></span>
-      <span className="pb-geo pb-tri" aria-hidden="true"></span>
-      <span className="pb-geo pb-ring" aria-hidden="true"></span>
-      <span className="pb-geo pb-pill" aria-hidden="true"></span>
-
-      {/* sparkles + glow blobs */}
-      <span className="pb-star pb-star-1" aria-hidden="true">✦</span>
-      <span className="pb-star pb-star-2" aria-hidden="true">✳</span>
-      <span className="pb-star pb-star-3" aria-hidden="true">✧</span>
-      <span className="pb-blob pb-blob-1" aria-hidden="true"></span>
-      <span className="pb-blob pb-blob-2" aria-hidden="true"></span>
+      <span className="pb-sheen" aria-hidden="true"></span>
 
       <div className="container">
-        <nav className="crumb-pill pb-crumb" aria-label="Breadcrumb">
-          HOME <span>➜</span> {crumb}
+        <nav className="pb-crumb" aria-label="Breadcrumb">
+          <span>Home</span>
+          <i aria-hidden="true" />
+          <strong>{crumb}</strong>
         </nav>
         <h1 className="pb-title">{title}</h1>
         {desc && <p className="pb-desc">{desc}</p>}
         {children && <div className="pb-actions">{children}</div>}
       </div>
-      <span className="pb-edge" aria-hidden="true">✳</span>
     </section>
   );
 }

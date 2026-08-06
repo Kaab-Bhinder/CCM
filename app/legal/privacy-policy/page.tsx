@@ -30,7 +30,7 @@ export default function Page() {
       <p>The advertiser(s) identified at the point of consent, service providers under contract, and authorities where legally required. We do not sell data outside the disclosed transaction. [Counsel: address CCPA "sale/share" definitions explicitly.]</p>
 
       <h2>5. Your rights</h2>
-      <p>Access, deletion, correction, and opt-out rights per applicable state law. Submit requests via the <a href="/company/contact">contact page</a>; identity verification applies. See also <a href="/compliance/privacy">data &amp; privacy practices</a>.</p>
+      <p>Access, deletion, correction, and opt-out rights per applicable state law. Submit requests via the <a href="/company/contact">contact page</a>; identity verification applies. See also data &amp; privacy practices.</p>
 
       <h2>6. Retention</h2>
       <p>[Retention schedule per record type — align with the schedule stated in consent practices.]</p>

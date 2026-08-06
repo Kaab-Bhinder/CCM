@@ -15,7 +15,7 @@ export default function Page() {
   <section className="section">
     <div className="container prose">
       <p className="updated">Effective date: [DATE]</p>
-      <div className="notice"><strong>Legal scaffold — counsel must draft the final text.</strong> Website terms governing use of this site. Commercial relationships are governed by the <a href="/legal/advertiser-terms">advertiser terms</a> and <a href="/legal/publisher-agreement">publisher agreement</a>, not this document.</div>
+      <div className="notice"><strong>Legal scaffold — counsel must draft the final text.</strong> Website terms governing use of this site. Commercial relationships are governed by the advertiser terms and publisher agreement, not this document.</div>
 
       <h2>1. Acceptance of terms</h2><p>[Placeholder.]</p>
       <h2>2. Use of the site</h2><p>[Permitted use, prohibited conduct.]</p>

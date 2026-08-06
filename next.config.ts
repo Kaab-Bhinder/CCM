@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
       // Old Close Crew site URLs → new structure (bookmarks + SEO).
       { source: "/contact", destination: "/company/contact", permanent: true },
       // Removed sub-pages → their section landing
+      { source: "/resources/glossary", destination: "/resources", permanent: false },
       { source: "/portal", destination: "/company/contact", permanent: false },
       { source: "/advertisers/pricing", destination: "/advertisers", permanent: false },
       { source: "/advertisers/integrations", destination: "/advertisers", permanent: false },

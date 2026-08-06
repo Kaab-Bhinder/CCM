@@ -68,7 +68,6 @@ export default function Page() {
             <li><a href="/resources/case-studies">Case studies</a></li>
             <li><a href="/resources/insights">Insights</a></li>
             <li><a href="/resources/faqs">FAQs</a></li>
-            <li><a href="/resources/glossary">Glossary</a></li>
           </ul>
         </div>
         <div className="footer-col">

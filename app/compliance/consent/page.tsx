@@ -28,7 +28,7 @@ export default function Page() {
       <ul>
         <li>Landing pages disclose who is collecting information, who may contact the consumer, and by what channels.</li>
         <li>Vertical-specific disclosures (e.g., third-party marketing organization language in Medicare) are required in creative and call flows where regulation demands them.</li>
-        <li>Publisher landing flows are reviewed at onboarding and re-reviewed on material change; see <a href="/compliance/publisher-vetting">publisher vetting</a>.</li>
+        <li>Publisher landing flows are reviewed at onboarding and re-reviewed on material change; see publisher vetting.</li>
       </ul>
 
       <h2>Call recording practices</h2>
@@ -42,7 +42,7 @@ export default function Page() {
       <ul>
         <li>Outbound contact is scrubbed against the National DNC Registry and applicable state lists before dialing.</li>
         <li>Internal suppression lists are honored network-wide; a consumer's opt-out with one campaign suppresses across our system.</li>
-        <li>Scrub logs are retained and auditable. See the <a href="/legal/dnc-policy">DNC policy</a>.</li>
+        <li>Scrub logs are retained and auditable. See the DNC policy.</li>
       </ul>
 
       <h2>Record retention &amp; audit trail</h2>
@@ -53,7 +53,7 @@ export default function Page() {
       </ul>
 
       <div className="notice">
-        <strong>Scope note:</strong> this page describes operating practices; it is not legal advice and does not modify any contract. The controlling documents are the <a href="/legal/consent-disclosure">consent &amp; disclosure policy</a>, <a href="/legal/publisher-agreement">publisher agreement</a>, and <a href="/legal/advertiser-terms">advertiser terms</a>.
+        <strong>Scope note:</strong> this page describes operating practices; it is not legal advice and does not modify any contract. The controlling documents are the consent &amp; disclosure policy, publisher agreement, and advertiser terms.
       </div>
     </div>
   </section>

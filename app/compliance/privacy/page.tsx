@@ -37,7 +37,7 @@ export default function Page() {
       </ul>
 
       <div className="notice">
-        <strong>Documents:</strong> <a href="/legal/privacy-policy">Privacy policy</a> · <a href="/legal/consent-disclosure">Consent &amp; disclosure policy</a> · <a href="/legal/dnc-policy">DNC policy</a>
+        <strong>Documents:</strong> Privacy policy · Consent &amp; disclosure policy · DNC policy
       </div>
     </div>
   </section>

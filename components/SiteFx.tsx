@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
 /* Site-wide behaviors that operate on rendered page content:
-   - demo form handling (.js-demo-form → show success note; no backend wired yet)
+   - form submission (.site-form → POST /api/submit → Google Sheet)
    - scroll-reveal animation on cards/steps/stats
    Re-runs on every route change so newly mounted content is covered. */
 export default function SiteFx() {
@@ -13,14 +13,57 @@ export default function SiteFx() {
   useEffect(() => {
     const cleanups: (() => void)[] = [];
 
-    document.querySelectorAll<HTMLFormElement>("form.js-demo-form").forEach((form) => {
-      const handler = (e: Event) => {
+    document.querySelectorAll<HTMLFormElement>("form.site-form").forEach((form) => {
+      const handler = async (e: Event) => {
         e.preventDefault();
-        const ok = form.querySelector<HTMLElement>(".form-success");
-        if (ok) ok.style.display = "block";
-        form.querySelectorAll<HTMLInputElement>("input, select, textarea, button").forEach((f) => {
-          f.disabled = true;
-        });
+        const status = form.querySelector<HTMLElement>(".form-status");
+        const success = form.querySelector<HTMLElement>(".form-success");
+        const submit = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+        const setBusy = (busy: boolean) => {
+          if (submit) {
+            submit.disabled = busy;
+            submit.dataset.label = submit.dataset.label || submit.textContent || "";
+            submit.textContent = busy ? "Sending…" : submit.dataset.label;
+          }
+        };
+
+        if (status) { status.textContent = ""; status.className = "form-status"; }
+        setBusy(true);
+
+        const fd = new FormData(form);
+        fd.append("_form", form.dataset.form || "Contact");
+        fd.append("_page", window.location.pathname);
+
+        try {
+          const res = await fetch("/api/submit", { method: "POST", body: fd });
+          const data = await res.json().catch(() => ({ ok: res.ok }));
+          if (!res.ok || !data.ok) throw new Error(data.error || "Submission failed.");
+          // Show the confirmation, then clear the form so it's ready to reuse.
+          if (success) {
+            success.classList.remove("fading");
+            success.style.display = "block";
+          }
+          if (submit) submit.textContent = "Sent";
+          form.reset();
+
+          window.setTimeout(() => {
+            if (success) {
+              success.classList.add("fading");
+              window.setTimeout(() => {
+                success.style.display = "none";
+                success.classList.remove("fading");
+              }, 400);
+            }
+            setBusy(false);
+          }, 5000);
+        } catch (err) {
+          setBusy(false);
+          if (status) {
+            status.className = "form-status error";
+            status.textContent =
+              err instanceof Error ? err.message : "Something went wrong. Please try again.";
+          }
+        }
       };
       form.addEventListener("submit", handler);
       cleanups.push(() => form.removeEventListener("submit", handler));

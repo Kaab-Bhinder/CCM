@@ -29,7 +29,7 @@ export default function Page() {
       <div className="grid cols-2">
         <div className="card feature">
           <h3>Publisher vetting &amp; onboarding</h3>
-          <p>Every publisher is reviewed before activation: company verification, traffic method review, sample creative audit, and network references. Approval is per-vertical — passing for auto insurance doesn't grant Medicare access. Full process on the <a href="/compliance/publisher-vetting">publisher vetting</a> page.</p>
+          <p>Every publisher is reviewed before activation: company verification, traffic method review, sample creative audit, and network references. Approval is per-vertical — passing for auto insurance doesn't grant Medicare access. Full process on the publisher vetting page.</p>
         </div>
         <div className="card feature">
           <h3>Traffic source disclosure</h3>
@@ -97,16 +97,12 @@ export default function Page() {
           <span className="eyebrow">Evidence</span>
           <h2>Recording, consent, and audit trail.</h2>
           <p className="muted" style={{ marginTop: "14px" }}>Every billable event carries its evidence with it. When your compliance team asks "prove it," the answer is an export, not a meeting.</p>
-          <div className="related">
-            <a href="/compliance/consent">Consent &amp; TCPA practices</a>
-            <a href="/compliance/privacy">Data &amp; privacy</a>
-          </div>
         </div>
         <ul className="checklist">
           <li><strong>Call recordings</strong> linked to every billable call record</li>
           <li><strong>Consent capture</strong> — method, language shown, and timestamp retained</li>
           <li><strong>Source chain</strong> — which publisher, which campaign, which creative</li>
-          <li><strong>Retention</strong> — records kept per the schedule in our <a href="/compliance/consent">consent practices</a></li>
+          <li><strong>Retention</strong> — records kept per the schedule in our consent practices</li>
         </ul>
       </div>
     </div>

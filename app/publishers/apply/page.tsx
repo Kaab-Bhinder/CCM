@@ -15,16 +15,16 @@ export default function Page() {
   <section className="section">
     <div className="container narrow">
       <div className="form-card">
-        <form className="js-demo-form form-grid" action="#" method="post">
-          <div className="field"><label htmlFor="p-company">Company / operating name *</label><input id="p-company" type="text" required /></div>
-          <div className="field"><label htmlFor="p-site">Website</label><input id="p-site" type="url" placeholder="https://" /></div>
-          <div className="field"><label htmlFor="p-name">Contact name *</label><input id="p-name" type="text" required /></div>
-          <div className="field"><label htmlFor="p-email">Email *</label><input id="p-email" type="email" required /></div>
+        <form className="site-form form-grid" data-form="Publisher Application" action="/api/submit" method="post">
+          <div className="field"><label htmlFor="p-company">Company / operating name *</label><input id="p-company" name="Company" type="text" required /></div>
+          <div className="field"><label htmlFor="p-site">Website</label><input id="p-site" name="Website" type="url" placeholder="https://" /></div>
+          <div className="field"><label htmlFor="p-name">Contact name *</label><input id="p-name" name="Contact Name" type="text" required /></div>
+          <div className="field"><label htmlFor="p-email">Email *</label><input id="p-email" name="Email" type="email" required /></div>
           <div className="field full"><label htmlFor="p-sources">Traffic sources *</label>
-            <textarea id="p-sources" required placeholder="Channels, creatives, landing flows. Be specific — 'social' alone will get a follow-up question."></textarea>
+            <textarea id="p-sources" name="Traffic Sources" required placeholder="Channels, creatives, landing flows. Be specific — 'social' alone will get a follow-up question."></textarea>
           </div>
           <div className="field"><label htmlFor="p-volume">Monthly volume *</label>
-            <select id="p-volume">
+            <select id="p-volume" name="Monthly Volume">
               <option>Under 500 calls/leads</option>
               <option>500 – 2,500</option>
               <option>2,500 – 10,000</option>
@@ -32,29 +32,31 @@ export default function Page() {
             </select>
           </div>
           <div className="field"><label htmlFor="p-platform">Tracking platform</label>
-            <select id="p-platform">
+            <select id="p-platform" name="Tracking Platform">
               <option>Ringba</option><option>Retreaver</option><option>TrackDrive</option><option>Invoca</option><option>Other / none yet</option>
             </select>
           </div>
           <div className="field full"><label>Verticals of interest *</label>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(160px,1fr))", gap: "10px", marginTop: "4px" }}>
-              <label className="small" style={{ display: "flex", gap: "8px", alignItems: "center" }}><input type="checkbox" style={{ width: "auto" }} /> Auto insurance</label>
-              <label className="small" style={{ display: "flex", gap: "8px", alignItems: "center" }}><input type="checkbox" style={{ width: "auto" }} /> Medicare</label>
-              <label className="small" style={{ display: "flex", gap: "8px", alignItems: "center" }}><input type="checkbox" style={{ width: "auto" }} /> ACA</label>
-              <label className="small" style={{ display: "flex", gap: "8px", alignItems: "center" }}><input type="checkbox" style={{ width: "auto" }} /> Final expense</label>
+              <label className="small" style={{ display: "flex", gap: "8px", alignItems: "center" }}><input type="checkbox" name="Verticals" value="Auto insurance" style={{ width: "auto" }} /> Auto insurance</label>
+              <label className="small" style={{ display: "flex", gap: "8px", alignItems: "center" }}><input type="checkbox" name="Verticals" value="Medicare" style={{ width: "auto" }} /> Medicare</label>
+              <label className="small" style={{ display: "flex", gap: "8px", alignItems: "center" }}><input type="checkbox" name="Verticals" value="ACA" style={{ width: "auto" }} /> ACA</label>
+              <label className="small" style={{ display: "flex", gap: "8px", alignItems: "center" }}><input type="checkbox" name="Verticals" value="Final expense" style={{ width: "auto" }} /> Final expense</label>
             </div>
           </div>
           <div className="field full"><label htmlFor="p-refs">Existing network references</label>
-            <textarea id="p-refs" placeholder="Networks you currently or previously ran with, and a contact if available. Optional but speeds review."></textarea>
+            <textarea id="p-refs" name="References" placeholder="Networks you currently or previously ran with, and a contact if available. Optional but speeds review."></textarea>
           </div>
           <div className="full">
             <label className="small" style={{ display: "flex", gap: "10px", alignItems: "flex-start", color: "var(--text-2)", marginBottom: "16px" }}>
-              <input type="checkbox" required style={{ width: "auto", marginTop: "4px" }} />
+              <input type="checkbox" name="Agreed To Requirements" value="Yes" required style={{ width: "auto", marginTop: "4px" }} />
               I've read the <a href="/publishers/requirements">network requirements</a> and can evidence consent for all traffic I send.
             </label>
+            <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hp-field" />
             <button className="btn btn-primary btn-lg" type="submit">Submit application</button>
+            <p className="form-status" role="status" aria-live="polite"></p>
           </div>
-          <div className="form-success full">Application received. Expect a written answer in 2–3 business days. <em>(Demo form — no backend wired yet.)</em></div>
+          <div className="form-success full">Application received. Expect a written answer in 2–3 business days.</div>
         </form>
         <p className="form-note">Review timeline: 2–3 business days for complete applications. Approval is per-vertical; you can request additional verticals later from the portal.</p>
       </div>

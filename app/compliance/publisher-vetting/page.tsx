@@ -20,7 +20,7 @@ export default function Page() {
         <div className="step"><div className="n"></div><div><h4>Traffic method review</h4><p>Channels, creatives, and landing flows disclosed and reviewed against network standards and vertical regulations.</p></div></div>
         <div className="step"><div className="n"></div><div><h4>Reference &amp; history check</h4><p>Prior network relationships checked where provided; industry blacklist and complaint-history screening.</p></div></div>
         <div className="step"><div className="n"></div><div><h4>Per-vertical authorization</h4><p>Approval is granted per vertical. Sensitive verticals (Medicare, final expense) carry additional creative pre-approval requirements.</p></div></div>
-        <div className="step"><div className="n"></div><div><h4>Contract</h4><p>The <a href="/legal/publisher-agreement">publisher agreement</a> binds consent, disclosure, and quality obligations before any traffic flows.</p></div></div>
+        <div className="step"><div className="n"></div><div><h4>Contract</h4><p>The publisher agreement binds consent, disclosure, and quality obligations before any traffic flows.</p></div></div>
       </div>
     </div>
   </section>
