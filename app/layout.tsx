@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SiteFx from "@/components/SiteFx";
+import StructuredData from "@/components/StructuredData";
 
 /* Self-hosted fonts: Kumbh Sans (body, variable) + Clash Display (headings). */
 const kumbh = localFont({
@@ -29,8 +30,9 @@ export const metadata: Metadata = {
     template: "%s | Close Crew",
   },
   description:
-    "Close Crew connects advertisers to high-intent consumers through a trusted publisher network, powered by Pay Per Call, AI Automation, and Digital Marketing.",
+    "Close Crew is a performance marketing network connecting advertisers with high-intent calls and leads through a vetted publisher network — Pay Per Call, AI Automation, and Digital Marketing across Auto Insurance, Medicare, ACA, and Final Expense.",
   metadataBase: new URL("https://www.closecrewmarketing.com"),
+  alternates: { canonical: "/" },
   keywords: [
     "performance marketing", "pay per call", "publisher network",
     "AI automation", "lead generation", "insurance leads",
@@ -38,11 +40,23 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "Close Crew",
+    locale: "en_US",
+    url: "https://www.closecrewmarketing.com",
     title: "Close Crew — Performance Marketing Network",
     description:
-      "Connecting advertisers to high-intent consumers through a trusted publisher network.",
+      "Connecting advertisers to high-intent consumers through a vetted publisher network.",
   },
-  robots: "index, follow",
+  twitter: {
+    card: "summary_large_image",
+    title: "Close Crew — Performance Marketing Network",
+    description:
+      "Connecting advertisers to high-intent consumers through a vetted publisher network.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -53,6 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
         <SiteFx />
+        <StructuredData />
       </body>
     </html>
   );

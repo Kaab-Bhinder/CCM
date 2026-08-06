@@ -18,8 +18,14 @@ const MARQUEE_SERVICES = [
 ];
 
 export const metadata: Metadata = {
-  title: { absolute: "Close Crew — Performance Marketing Network" },
-  description: "Close Crew connects advertisers to high-intent consumers through a trusted publisher network, powered by Pay Per Call, AI Automation, and Digital Marketing.",
+  title: { absolute: "Close Crew — Your Crew to Close More Deals" },
+  description: "Close Crew connects advertisers with high-intent calls and leads through a vetted publisher network — pay per call, AI automation, and digital marketing.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Close Crew — Your Crew to Close More Deals",
+    description:
+      "Connecting advertisers with high-intent calls and leads through a vetted publisher network.",
+  },
 };
 
 export default function Page() {
